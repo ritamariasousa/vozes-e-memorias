@@ -1,0 +1,384 @@
+/* =====================================================
+   INTERACTIONS — Navegação, animações, galeria, lightbox
+   e comparador antes/atual (Etapa 7)
+   ===================================================== */
+
+/* -----------------------------------------------------
+   ANIMAÇÕES DE ENTRADA (SCROLLYTELLING)
+   ----------------------------------------------------- */
+.reveal-on-scroll {
+   opacity: 0;
+   transform: translateY(16px);
+   transition: opacity 600ms ease-out, transform 600ms ease-out;
+}
+
+.reveal-on-scroll.is-visible {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+   .reveal-on-scroll {
+      opacity: 1;
+      transform: none;
+      transition: none;
+   }
+}
+
+/* -----------------------------------------------------
+   HEADER — estado "scrolled" (ativado via JS)
+   ----------------------------------------------------- */
+.site-header.is-scrolled {
+   border-bottom-color: var(--color-divider);
+   box-shadow: var(--shadow-subtle);
+}
+
+/* -----------------------------------------------------
+   ÍNDICE DE CAPÍTULOS — estados ativos
+   ----------------------------------------------------- */
+.chapter-index__list a.is-active {
+   color: var(--color-green-forest);
+   font-weight: 600;
+   border-left-color: var(--color-terracotta);
+}
+
+body.has-index-open {
+   overflow: hidden;
+}
+
+/* -----------------------------------------------------
+   GALERIA — grade e cards
+   ----------------------------------------------------- */
+.gallery__grid {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: var(--space-5);
+   max-width: none;
+   padding: 0 var(--page-padding-inline);
+}
+
+@media (min-width: 640px) {
+   .gallery__grid {
+      grid-template-columns: repeat(3, 1fr);
+   }
+}
+
+@media (min-width: 1024px) {
+   .gallery__grid {
+      grid-template-columns: repeat(4, 1fr);
+   }
+}
+
+.gallery__item {
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-2);
+   text-align: left;
+   border-radius: var(--radius-medium);
+   overflow: hidden;
+   background: none;
+   transition: transform 150ms ease;
+}
+
+.gallery__item:hover,
+.gallery__item:focus-visible {
+   transform: translateY(-2px);
+}
+
+.gallery__item[hidden] {
+   display: none;
+}
+
+.gallery__thumb {
+   position: relative;
+   aspect-ratio: 4 / 3;
+   border-radius: var(--radius-medium);
+   overflow: hidden;
+   background-color: var(--color-divider);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   box-shadow: var(--shadow-subtle);
+}
+
+.gallery__thumb img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.gallery__thumb--pending {
+   background-image: repeating-linear-gradient(45deg,
+         rgba(243, 235, 221, 0.5) 0px,
+         rgba(243, 235, 221, 0.5) 10px,
+         transparent 10px,
+         transparent 20px);
+}
+
+.gallery__thumb-icon {
+   font-size: 1.75rem;
+   color: var(--color-green-forest);
+}
+
+.gallery__thumb-badge {
+   position: absolute;
+   bottom: var(--space-2);
+   left: var(--space-2);
+   background-color: rgba(41, 43, 39, 0.75);
+   color: var(--color-background);
+   font-size: 0.7rem;
+   padding: 2px var(--space-2);
+   border-radius: var(--radius-small);
+}
+
+.gallery__item-caption {
+   font-size: var(--text-body-small);
+   color: var(--color-text-secondary);
+   line-height: 1.4;
+}
+
+/* -----------------------------------------------------
+   LIGHTBOX (galeria)
+   ----------------------------------------------------- */
+.lightbox {
+   position: fixed;
+   inset: 0;
+   z-index: var(--z-lightbox, 300);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: var(--space-6);
+}
+
+.lightbox[hidden] {
+   display: none;
+}
+
+.lightbox__overlay {
+   position: absolute;
+   inset: 0;
+   background-color: rgba(41, 43, 39, 0.92);
+}
+
+/* 1. PAINEL PRINCIPAL (Mantenha ou substitua para tirar o overflow que cortava a seta) */
+.lightbox__panel {
+   position: relative;
+   z-index: 1;
+   max-width: min(960px, 92vw);
+   max-height: 90vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: var(--space-4);
+   top: 25px;
+}
+
+/* 2. ÁREA DA MÍDIA (Garante que a barra de rolagem só apareça na foto) */
+.lightbox__media-area {
+   width: 100%;
+   max-height: 75vh;
+   overflow-y: auto;
+   /* Permite APENAS a rolagem para baixo (vertical) */
+   overflow-x: hidden;
+   /* Remove de vez a barra de rolagem deitada */
+   scrollbar-width: thin;
+}
+
+/* 3. A SUA IMAGEM NORMAL CORRIGIDA */
+.lightbox__image {
+   display: block;
+   margin: 0 auto;
+   max-width: 100%;
+   max-height: 70vh;
+   border-radius: var(--radius-medium);
+   box-shadow: var(--shadow-media);
+   cursor: zoom-in;
+   /* O cursor de lupa já aparece aqui */
+   transition: all 0.3s ease;
+   /* Faz o crescimento ser suave */
+}
+
+/* 4. A CLASSE NOVA QUE VOCÊ VAI ADICIONAR (O Javascript vai usar ela no clique) */
+.lightbox__image.is-zoomed {
+   max-height: none;
+   /* Libera a altura para cartas compridas */
+   max-width: 100%;
+   /* Trava o tamanho máximo na largura da tela */
+   width: 100%;
+   /* Preenche todo o espaço horizontal sem vazar */
+   cursor: zoom-out;
+}
+
+.lightbox__pending-note {
+   color: var(--color-background);
+   background-color: rgba(252, 250, 245, 0.08);
+   border: 1px dashed rgba(252, 250, 245, 0.4);
+   padding: var(--space-6);
+   border-radius: var(--radius-medium);
+   text-align: center;
+   max-width: 480px;
+}
+
+.lightbox__caption {
+   color: var(--color-paper);
+   font-size: var(--text-body-small);
+   text-align: center;
+   max-width: 640px;
+}
+
+.lightbox__counter {
+   color: var(--color-gold-aged);
+   font-size: var(--text-body-small);
+}
+
+.lightbox__close {
+   position: absolute;
+   top: calc(-1 * var(--space-7));
+   right: 0;
+   width: 40px;
+   height: 40px;
+   font-size: 1.75rem;
+   color: var(--color-background);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.lightbox__nav {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   width: 44px;
+   height: 44px;
+   border-radius: 50%;
+   background-color: rgba(252, 250, 245, 0.12);
+   color: var(--color-background);
+   font-size: 1.25rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: background-color 150ms ease;
+}
+
+.lightbox__nav:hover {
+   background-color: rgba(252, 250, 245, 0.25);
+}
+
+.lightbox__nav--prev {
+   left: calc(-1 * var(--space-9));
+}
+
+.lightbox__nav--next {
+   right: calc(-1 * var(--space-9));
+}
+
+@media (max-width: 900px) {
+   .lightbox__nav--prev {
+      left: var(--space-3);
+   }
+
+   .lightbox__nav--next {
+      right: var(--space-3);
+   }
+
+   .lightbox__close {
+      top: var(--space-3);
+      right: var(--space-3);
+   }
+}
+
+body.has-lightbox-open {
+   overflow: hidden;
+}
+
+/* -----------------------------------------------------
+   COMPARADOR ANTES / ATUAL
+   ----------------------------------------------------- */
+.before-after {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+}
+
+.before-after__image {
+   position: absolute;
+   inset: 0;
+   width: 100%;
+   height: 100%;
+}
+
+.before-after__image--after {
+   clip-path: inset(0 0 0 50%);
+}
+
+.before-after__image .media-placeholder {
+   width: 100%;
+   height: 100%;
+   border-radius: 0;
+}
+
+.before-after__divider {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 50%;
+   width: 2px;
+   background-color: var(--color-background);
+   box-shadow: 0 0 8px rgba(41, 43, 39, 0.4);
+   pointer-events: none;
+   z-index: 2;
+}
+
+.before-after__slider {
+   position: absolute;
+   inset: 0;
+   width: 100%;
+   height: 100%;
+   margin: 0;
+   appearance: none;
+   background: transparent;
+   cursor: ew-resize;
+   z-index: 3;
+}
+
+.before-after__slider::-webkit-slider-thumb {
+   appearance: none;
+   width: 48px;
+   height: 48px;
+   border-radius: 50%;
+   background-color: var(--color-background);
+   border: 3px solid var(--color-terracotta);
+   cursor: ew-resize;
+   box-shadow: var(--shadow-media);
+}
+
+.before-after__slider::-moz-range-thumb {
+   width: 48px;
+   height: 48px;
+   border-radius: 50%;
+   background-color: var(--color-background);
+   border: 3px solid var(--color-terracotta);
+   cursor: ew-resize;
+   box-shadow: var(--shadow-media);
+}
+
+.before-after__label {
+   position: absolute;
+   top: var(--space-4);
+   z-index: 2;
+   background-color: rgba(41, 43, 39, 0.6);
+   color: var(--color-background);
+   font-size: var(--text-body-small);
+   padding: var(--space-1) var(--space-3);
+   border-radius: var(--radius-small);
+   pointer-events: none;
+}
+
+.before-after__label--before {
+   left: var(--space-4);
+}
+
+.before-after__label--after {
+   right: var(--space-4);
+}

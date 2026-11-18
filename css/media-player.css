@@ -1,0 +1,372 @@
+/* =====================================================
+   MEDIA PLAYER — Estilos dos componentes de áudio, vídeo
+   e visualizador de documentos (Etapa 6)
+   Reaproveita os tokens definidos em styles.css
+   ===================================================== */
+
+/* -----------------------------------------------------
+   ÁUDIO
+   ----------------------------------------------------- */
+.audio-player {
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-3);
+   background-color: var(--color-paper);
+   border-radius: var(--radius-medium);
+   padding: var(--space-5);
+   box-shadow: var(--shadow-subtle);
+}
+
+.audio-player--pending {
+   opacity: 0.85;
+}
+
+.audio-player--error {
+   border: 1px solid var(--color-terracotta);
+}
+
+.audio-player__header {
+   display: flex;
+   justify-content: space-between;
+   align-items: baseline;
+   gap: var(--space-3);
+   flex-wrap: wrap;
+}
+
+.audio-player__title {
+   font-family: var(--font-display);
+   font-weight: 600;
+   color: var(--color-wood-brown);
+   font-size: 1rem;
+}
+
+.audio-player__source {
+   font-size: var(--text-body-small);
+   color: var(--color-text-secondary);
+}
+
+.audio-player__controls {
+   display: flex;
+   align-items: center;
+   gap: var(--space-4);
+   flex-wrap: wrap;
+}
+
+.audio-player__play-btn {
+   flex-shrink: 0;
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   background-color: var(--color-green-forest);
+   color: var(--color-background);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: transform 120ms ease-out, background-color 150ms ease;
+}
+
+.audio-player__play-btn:hover:not(:disabled) {
+   transform: scale(1.04);
+}
+
+.audio-player__play-btn:active:not(:disabled) {
+   transform: scale(0.98);
+}
+
+.audio-player__play-btn:disabled {
+   background-color: var(--color-divider);
+   cursor: not-allowed;
+}
+
+.audio-player__play-icon {
+   font-size: 0.9rem;
+   line-height: 1;
+}
+
+.audio-player__progress-wrapper {
+   flex: 1;
+   min-width: 120px;
+}
+
+.audio-player__progress {
+   width: 100%;
+   accent-color: var(--color-terracotta);
+   cursor: pointer;
+}
+
+.audio-player__progress:disabled {
+   cursor: not-allowed;
+   opacity: 0.5;
+}
+
+.audio-player__time {
+   font-size: var(--text-body-small);
+   color: var(--color-text-secondary);
+   white-space: nowrap;
+   min-width: 96px;
+   text-align: right;
+}
+
+.audio-player__volume-wrapper {
+   display: flex;
+   align-items: center;
+   gap: var(--space-2);
+}
+
+.audio-player__volume {
+   width: 72px;
+   accent-color: var(--color-green-forest);
+   cursor: pointer;
+}
+
+.audio-player__volume:disabled {
+   cursor: not-allowed;
+   opacity: 0.5;
+}
+
+.audio-player__pending-note {
+   margin: 0;
+   font-size: var(--text-body-small);
+   font-style: italic;
+   color: var(--color-text-secondary);
+}
+
+.audio-player__transcript-toggle {
+   align-self: flex-start;
+   font-size: var(--text-body-small);
+   color: var(--color-green-forest);
+   font-weight: 600;
+   text-decoration: underline;
+   text-underline-offset: 2px;
+}
+
+.audio-player__transcript-body {
+   font-size: var(--text-body-small);
+   color: var(--color-text-primary);
+   background-color: var(--color-background);
+   border-radius: var(--radius-small);
+   padding: var(--space-4);
+   line-height: 1.6;
+}
+
+/* -----------------------------------------------------
+   VÍDEO
+   ----------------------------------------------------- */
+.video-player {
+   width: 100%;
+}
+
+.video-player__frame {
+   position: relative;
+   width: 100%;
+   aspect-ratio: 16 / 9;
+   border-radius: var(--radius-medium);
+   overflow: hidden;
+   box-shadow: var(--shadow-media);
+   background-color: var(--color-wood-brown);
+}
+
+.video-player__element {
+   width: 100%;
+   height: 100%;
+   display: block;
+   background-color: #000;
+}
+
+.video-player__frame--placeholder {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: var(--space-3);
+   background-color: var(--color-divider);
+   background-image: repeating-linear-gradient(45deg,
+         rgba(243, 235, 221, 0.5) 0px,
+         rgba(243, 235, 221, 0.5) 10px,
+         transparent 10px,
+         transparent 20px);
+   color: var(--color-text-secondary);
+}
+
+.video-player__frame--error {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--color-paper);
+}
+
+.video-player__icon {
+   font-size: 2rem;
+   color: var(--color-green-forest);
+}
+
+.video-player__pending-note {
+   font-size: var(--text-body-small);
+   text-align: center;
+   padding: 0 var(--space-5);
+}
+
+.video-player__fullscreen-btn {
+   position: absolute;
+   bottom: var(--space-3);
+   right: var(--space-3);
+   width: 36px;
+   height: 36px;
+   border-radius: var(--radius-small);
+   background-color: rgba(41, 43, 39, 0.6);
+   color: var(--color-background);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 1.1rem;
+   transition: background-color 150ms ease;
+}
+
+.video-player__fullscreen-btn:hover {
+   background-color: rgba(41, 43, 39, 0.85);
+}
+
+/* -----------------------------------------------------
+   DOCUMENTO / CARTA — gatilho clicável
+   ----------------------------------------------------- */
+.js-document-viewer--ready {
+   cursor: pointer;
+   transition: box-shadow 150ms ease;
+}
+
+.js-document-viewer--ready:hover,
+.js-document-viewer--ready:focus-visible {
+   box-shadow: var(--shadow-media);
+}
+
+/* -----------------------------------------------------
+   MODAL / LIGHTBOX DE DOCUMENTO
+   ----------------------------------------------------- */
+.document-modal {
+   position: fixed;
+   inset: 0;
+   z-index: var(--z-lightbox, 300);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: var(--space-6);
+}
+
+.document-modal[hidden] {
+   display: none;
+}
+
+.document-modal__overlay {
+   position: absolute;
+   inset: 0;
+   background-color: rgba(41, 43, 39, 0.88);
+}
+
+.document-modal__panel {
+   position: relative;
+   z-index: 1;
+   background-color: var(--color-background);
+   border-radius: var(--radius-large);
+   max-width: min(900px, 92vw);
+   max-height: 88vh;
+   overflow-y: auto;
+   padding: var(--space-7);
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-6);
+}
+
+.document-modal__close {
+   position: absolute;
+   top: var(--space-4);
+   right: var(--space-4);
+   width: 36px;
+   height: 36px;
+   font-size: 1.5rem;
+   line-height: 1;
+   color: var(--color-text-secondary);
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: background-color 150ms ease;
+}
+
+.document-modal__close:hover {
+   background-color: var(--color-paper);
+}
+
+.document-modal__image-area {
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-3);
+   align-items: center;
+}
+
+.document-modal__image {
+   max-width: 100%;
+   max-height: 50vh;
+   border-radius: var(--radius-medium);
+   box-shadow: var(--shadow-media);
+}
+
+.document-modal__pending-note {
+   font-style: italic;
+   color: var(--color-text-secondary);
+   background-color: var(--color-paper);
+   padding: var(--space-6);
+   border-radius: var(--radius-medium);
+   text-align: center;
+   width: 100%;
+}
+
+.document-modal__caption {
+   font-size: var(--text-body-small);
+   color: var(--color-text-secondary);
+   text-align: center;
+}
+
+.document-modal__transcript-title {
+   font-family: var(--font-display);
+   font-size: var(--text-h2);
+   color: var(--color-wood-brown);
+   margin-bottom: var(--space-3);
+}
+
+.document-modal__transcript-body {
+   font-family: var(--font-quote);
+   font-style: italic;
+   font-size: var(--text-quote);
+   line-height: 1.6;
+   color: var(--color-text-primary);
+}
+
+.document-modal__transcript-body p {
+   margin-bottom: var(--space-4);
+}
+
+body.has-modal-open {
+   overflow: hidden;
+}
+
+/* -----------------------------------------------------
+   RESPONSIVO
+   ----------------------------------------------------- */
+@media (max-width: 639px) {
+   .audio-player__controls {
+      flex-wrap: wrap;
+   }
+
+   .audio-player__volume-wrapper {
+      order: 10;
+      width: 100%;
+   }
+
+   .document-modal__panel {
+      padding: var(--space-5);
+   }
+
+   .document-modal__transcript-body {
+      font-size: var(--text-quote);
+   }
+}

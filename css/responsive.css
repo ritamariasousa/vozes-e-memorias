@@ -1,0 +1,335 @@
+/* =====================================================
+   RESPONSIVE — Media queries para 375 / 390 / 430 / 768 /
+   1024 / 1440px
+   Etapa 8
+
+   Filosofia: mobile-first já está parcialmente aplicado em
+   styles.css e interactions.css. Este arquivo CONSOLIDA e
+   AJUSTA FINAMENTE os breakpoints solicitados, sem duplicar
+   regras já corretas — apenas reforça/corrige o que a revisão
+   de código identificou como risco de overflow ou aperto visual.
+
+   Ordem de carregamento esperada no <head>:
+   styles.css → media-player.css → interactions.css → responsive.css
+   (responsive.css deve ser o ÚLTIMO, para suas regras terem
+   precedência de cascata sobre os arquivos anteriores quando
+   necessário).
+   ===================================================== */
+
+/* -----------------------------------------------------
+   REGRA GLOBAL ANTI-OVERFLOW (aplica-se a todas as larguras)
+   ----------------------------------------------------- */
+html,
+body {
+   max-width: 100%;
+   overflow-x: clip;
+}
+
+img,
+video,
+svg,
+.media-placeholder,
+.gallery__thumb {
+   max-width: 100%;
+}
+
+/* =======================================================
+   375px — iPhone SE / telas muito pequenas
+   ======================================================= */
+@media (max-width: 374px) {
+   :root {
+      --page-padding-inline: 16px;
+   }
+
+   .hero__title {
+      font-size: 2rem;
+      line-height: 1.15;
+   }
+
+   .hero__subtitle {
+      font-size: 0.9375rem;
+   }
+
+   .chapter-index {
+      width: 92vw;
+   }
+
+   .lightbox__nav--prev,
+   .lightbox__nav--next {
+      width: 36px;
+      height: 36px;
+      font-size: 1rem;
+   }
+
+   .before-after__slider::-webkit-slider-thumb,
+   .before-after__slider::-moz-range-thumb {
+      width: 36px;
+      height: 36px;
+   }
+}
+
+/* =======================================================
+   375px – 429px — faixa geral de smartphones pequenos/médios
+   (cobre 375, 390 e parte de 430)
+   ======================================================= */
+@media (min-width: 375px) and (max-width: 429px) {
+   .hero {
+      min-height: 90vh;
+   }
+
+   .hero__content {
+      padding: var(--space-6) var(--page-padding-inline) var(--space-7);
+   }
+
+   .hero__title {
+      font-size: clamp(2rem, 8vw, 2.5rem);
+   }
+
+   .chapter__title {
+      font-size: clamp(1.5rem, 7vw, 1.875rem);
+   }
+
+   .audio-player__controls {
+      gap: var(--space-2);
+   }
+
+   .audio-player__time {
+      min-width: 0;
+      font-size: 0.8125rem;
+   }
+
+   .audio-player__volume-wrapper {
+      display: none;
+      /* Em telas muito estreitas, volume some dos controles visíveis — o controle nativo do <audio>, se exposto via outro meio, permanece acessível; aqui priorizamos play/progresso/tempo. */
+   }
+
+   .gallery__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-3);
+      padding: 0 var(--space-4);
+   }
+
+   .gallery__item-caption {
+      font-size: 0.8125rem;
+      -webkit-line-clamp: 2;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+   }
+
+   .lightbox__panel {
+      max-width: 94vw;
+      gap: var(--space-3);
+   }
+
+   .lightbox__image {
+      max-height: 56vh;
+   }
+
+   .document-modal__panel {
+      padding: var(--space-4);
+      max-width: 94vw;
+   }
+
+   .letter-viewer__transcript {
+      font-size: 1.125rem;
+      padding: var(--space-4);
+   }
+}
+
+/* =======================================================
+   430px — iPhone Pro Max e Androids grandes
+   ======================================================= */
+@media (min-width: 430px) and (max-width: 639px) {
+   .hero__title {
+      font-size: clamp(2.25rem, 7vw, 2.75rem);
+   }
+
+   .gallery__grid {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   .audio-player__volume-wrapper {
+      display: flex;
+      /* a partir de 430px já cabe novamente */
+   }
+}
+
+/* =======================================================
+   ATÉ 639px — regra consolidada para todo o intervalo mobile
+   (reforça/organiza o que já estava espalhado em styles.css
+   e interactions.css, evitando duplicidade de intenção)
+   ======================================================= */
+@media (max-width: 639px) {
+   .site-header__inner {
+      padding: var(--space-3) var(--page-padding-inline);
+      height: 56px;
+   }
+
+   .site-header__chapter-indicator {
+      display: none;
+   }
+
+   .reading-progress {
+      top: 56px;
+   }
+
+   .hero {
+      min-height: 92vh;
+   }
+
+   .chapter {
+      padding-top: var(--space-7);
+      padding-bottom: var(--space-7);
+   }
+
+   .chapter__reading-column {
+      width: 100%;
+   }
+
+   .pull-quote,
+   .lyric-quote {
+      padding: var(--space-4);
+      font-size: 1.25rem;
+   }
+
+   .timeline__list {
+      gap: var(--space-4);
+   }
+
+   .letter-viewer {
+      gap: var(--space-4);
+   }
+
+   .site-footer__inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--space-3);
+   }
+
+   /* Vídeo: garante que o frame nunca ultrapasse a largura da tela */
+   .video-player__frame {
+      width: 100%;
+   }
+
+   .video-player__fullscreen-btn {
+      width: 32px;
+      height: 32px;
+      font-size: 0.9rem;
+   }
+}
+
+/* =======================================================
+   768px — Tablet (retrato) / iPad Mini
+   ======================================================= */
+@media (min-width: 640px) and (max-width: 1023px) {
+   :root {
+      --page-padding-inline: 40px;
+   }
+
+   .hero__title {
+      font-size: clamp(2.75rem, 5.5vw, 3.5rem);
+   }
+
+   .chapter__reading-column {
+      max-width: var(--reading-column-max);
+      width: 100%;
+   }
+
+   .gallery__grid {
+      grid-template-columns: repeat(3, 1fr);
+   }
+
+   .chapter-index {
+      width: min(360px, 60vw);
+   }
+
+   .document-modal__panel,
+   .lightbox__panel {
+      max-width: 85vw;
+   }
+
+   .site-header__chapter-indicator {
+      display: inline-block;
+      max-width: 240px;
+   }
+}
+
+/* =======================================================
+   1024px — Desktop padrão
+   ======================================================= */
+@media (min-width: 1024px) {
+   .chapter__reading-column {
+      width: clamp(var(--reading-column-min), 60vw, var(--reading-column-max));
+      margin: 0 auto;
+   }
+
+   .gallery__grid {
+      grid-template-columns: repeat(4, 1fr);
+   }
+
+   .lightbox__nav--prev {
+      left: calc(-1 * var(--space-8));
+   }
+
+   .lightbox__nav--next {
+      right: calc(-1 * var(--space-8));
+   }
+}
+
+/* =======================================================
+   1440px — Desktop grande
+   ======================================================= */
+@media (min-width: 1440px) {
+   :root {
+      --page-padding-inline: 96px;
+   }
+
+   .story,
+   .site-header__inner,
+   .site-footer__inner {
+      max-width: 1440px;
+   }
+
+   /* A coluna de leitura permanece com a MESMA largura máxima
+     (740px) — o espaço extra da tela grande vai para as margens
+     e para o respiro ao redor do índice lateral, nunca para
+     alargar o texto além do confortável. */
+   .chapter__reading-column {
+      width: var(--reading-column-max);
+   }
+
+   .hero__content {
+      max-width: 960px;
+   }
+
+   .gallery__grid {
+      max-width: 1440px;
+      margin: 0 auto;
+   }
+
+   .lightbox__nav--prev {
+      left: calc(-1 * var(--space-9));
+   }
+
+   .lightbox__nav--next {
+      right: calc(-1 * var(--space-9));
+   }
+}
+
+/* -----------------------------------------------------
+   SALVAGUARDA FINAL — qualquer elemento largo que escape
+   ao controle explícito acima é contido aqui.
+   ----------------------------------------------------- */
+.before-after,
+.video-player__frame,
+.document-modal__image,
+.lightbox__image {
+   max-width: 100%;
+}
+
+table {
+   display: block;
+   overflow-x: auto;
+   max-width: 100%;
+}

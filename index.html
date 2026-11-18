@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vozes e memórias: histórias que o rádio guardou na Vila Conceição I</title>
+    <meta name="description" content="Em meio a canções, notícias, lembranças afetivas e relatos de resistência, moradores da Vila Conceição I revelam como o rádio acompanhou suas vidas, aproximou pessoas e se tornou parte da memória de uma comunidade rural de Imperatriz, no Maranhão." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;1,400;1,500&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/images/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/images/favicon.png" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/media-player.css" />
+    <link rel="stylesheet" href="css/interactions.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <!-- ===================================================== -->
+    <!-- HEADER                                                  -->
+    <!-- ===================================================== -->
+    <header class="site-header" id="site-header">
+      <div class="site-header__inner">
+        <a href="#topo" class="site-header__brand">
+          <span>Vozes e Memórias</span>
+          <img src="assets/images/icon-logo.svg" alt="" class="site-header__brand-icon" aria-hidden="true" />
+        </a>
+        <span class="site-header__chapter-indicator" id="header-chapter-indicator" aria-live="polite"></span>
+        <button class="site-header__menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="chapter-index-panel">
+          <span class="sr-only">Abrir índice de capítulos</span>
+          <span class="icon-menu" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ===================================================== -->
+    <!-- BARRA DE PROGRESSO                                      -->
+    <!-- ===================================================== -->
+    <div class="reading-progress" id="reading-progress" role="progressbar" aria-label="Progresso de leitura" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <div class="reading-progress__fill" id="reading-progress-fill"></div>
+    </div>
+
+    <!-- ===================================================== -->
+    <!-- ÍNDICE DE CAPÍTULOS                                     -->
+    <!-- ===================================================== -->
+    <nav class="chapter-index" id="chapter-index-panel" aria-label="Índice de capítulos">
+      <div class="chapter-index__header">
+        <span>Capítulos</span>
+        <button class="chapter-index__close" id="chapter-index-close" aria-label="Fechar índice">&times;</button>
+      </div>
+      <ol class="chapter-index__list">
+        <li><a href="#capitulo-0" data-chapter="0">Abertura — A conquista da terra</a></li>
+        <li><a href="#capitulo-1" data-chapter="1">O rádio como testemunha</a></li>
+        <li><a href="#capitulo-2" data-chapter="2">Memórias que o tempo não apaga</a></li>
+        <li><a href="#capitulo-3" data-chapter="3">O rádio, companheiro de todas as horas</a></li>
+        <li><a href="#capitulo-4" data-chapter="4">Um encontro coletivo</a></li>
+        <li><a href="#capitulo-5" data-chapter="5">O medo das notícias</a></li>
+        <li><a href="#capitulo-6" data-chapter="6">Uma paixão pelo rádio</a></li>
+        <li><a href="#capitulo-7" data-chapter="7">Reencontro com Joana Darc</a></li>
+        <li><a href="#capitulo-8" data-chapter="8">Escreva uma carta, meu amor</a></li>
+        <li><a href="#capitulo-9" data-chapter="9">Memórias que o rádio guardou</a></li>
+        <li><a href="#sobre-a-autora" data-chapter="10">Sobre a Autora</a></li>
+        <li><a href="#expediente" data-chapter="11">Expediente</a></li>
+      </ol>
+    </nav>
+    <div class="chapter-index__overlay" id="chapter-index-overlay"></div>
+
+    <!-- ===================================================== -->
+    <!-- HERO                                                    -->
+    <!-- ===================================================== -->
+    <section class="hero" id="topo" data-media-id="foto-01">
+      <div class="hero__media">
+        <div class="media-placeholder media-placeholder--hero" data-media-ref="foto-01">
+          <img src="assets/images/foto-1-vila-conceicao.webp" />
+        </div>
+      </div>
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <h1 class="hero__title">Vozes e memórias: histórias que o rádio guardou na Vila Conceição I</h1>
+        <p class="hero__subtitle">Em meio a canções, notícias, lembranças afetivas e relatos de resistência, moradores da Vila Conceição I revelam como o rádio acompanhou suas vidas, aproximou pessoas e se tornou parte da memória de uma comunidade rural de Imperatriz, no Maranhão.</p>
+        <a href="#capitulo-0" class="hero__scroll-cue" aria-label="Rolar para começar a leitura">
+          <span class="hero__scroll-cue-line"></span>
+          <span class="hero__scroll-cue-text">Comece a leitura</span>
+          <span class="hero__scroll-cue-line"></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- CONTAINER PRINCIPAL                                     -->
+    <!-- ===================================================== -->
+    <main class="story" id="story-main">
+      <!-- ============================================= -->
+      <!-- CAPÍTULO 0 — Abertura / Fundação da Vila        -->
+      <!-- (sem intertítulo próprio na fonte, páginas 1-2) -->
+      <!-- ============================================= -->
+      <article class="chapter" id="capitulo-0" data-chapter-title="Abertura — A conquista da terra">
+        <div class="chapter__reading-column">
+          <p>A Vila Conceição I surgiu da ocupação de uma grande área de terra, realizada por 250 famílias oriundas de 29 povoados pertencentes ao município de Imperatriz. Eram homens e mulheres que sonhavam em conquistar seu próprio pedaço de chão para trabalhar e garantir a sobrevivência de suas famílias.</p>
+
+          <p>A conquista ocorreu em 16 de julho de 1987. Em meio a foices, facões, machados e à resistência dos posseiros, lá estava o rádio, fazendo parte do cotidiano dos recém-chegados à Fazenda Itacira. Além de levar notícias e entretenimento, o aparelho fazia companhia, aproximava moradores e acompanhava as transformações que estavam por vir.</p>
+
+          <p>Inicialmente, a área ocupada manteve o nome original da propriedade, Fazenda Itacira, herdado do antigo proprietário. Com o passar do tempo, porém, os próprios assentados passaram a chamá-la de "Fazenda Criminosa", em referência aos conflitos entre as famílias ocupantes e os antigos donos do terreno. Os moradores mais antigos recordam aquele período como um tempo de medo e tensão, marcado, segundo seus relatos, por mortes.</p>
+
+          <p>Naquele início de formação da Vila Conceição I, o rádio assumiu diferentes significados na vida dos moradores. Se, em alguns momentos, era fonte de alegria, entretenimento e companhia, em outros, as notícias transmitidas pelas ondas sonoras provocavam medo e aumentavam a insegurança das famílias que lutavam para permanecer na terra.</p>
+
+          <!-- ÁUDIO 1 -->
+          <div class="media-container media-container--audio js-audio-player" data-media-ref="audio-01">
+            <p class="media-caption">Em seu relato, Maria Querubina recorda as notícias transmitidas pela Rádio Imperatriz e o clima de medo e apreensão que elas provocavam entre as famílias do assentamento.</p>
+          </div>
+
+          <p>Segundo Maria Querubina da Silva Neta, uma das moradoras mais antigas da comunidade e liderança do processo de ocupação, o radialista Moacyr Spósito Ribeiro, proprietário da Rádio Imperatriz Sociedade Ltda, mantinha uma relação de amizade com um dos fazendeiros envolvidos na disputa pela área, que era próxima a sua fazenda.</p>
+
+          <p>Querubina relembra que, todas as manhãs, durante o programa Café da Manhã, Moacyr utilizava os microfones da emissora para transmitir mensagens que, na percepção dos posseiros, tinham o objetivo de intimidá-los e pressioná-los a deixar a terra. As palavras chegavam pelo rádio a famílias que já enfrentavam as incertezas e os conflitos provocados pela ocupação. A pressão, segundo ela, levou muitos moradores a abandonarem a área.</p>
+
+          <!-- VÍDEO 1 -->
+          <figure class="media-container media-container--video">
+            <div class="video-player__frame">
+              <iframe class="video-player__element" src="https://www.youtube.com/embed/w2rNcd3RNwA?si=Ejk_hb0UFSb1XuoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <figcaption class="media-caption">O medo provocado pelas notícias veiculadas no rádio gerou incertezas entre as famílias e levou muitas delas a deixar o assentamento.</figcaption>
+          </figure>
+
+          <p>"Teve muita gente que foi embora", recorda a liderança, ao relembrar um período em que o rádio, além de informar e entreter, também fazia parte das tensões vividas pelos primeiros moradores da Vila Conceição I.</p>
+        </div>
+      </article>
+
+      <!-- ============================================= -->
+      <!-- CAPÍTULO 1 — O rádio como testemunha (páginas 2-5) -->
+      <!-- ============================================= -->
+      <article class="chapter" id="capitulo-1" data-chapter-title="O rádio como testemunha da história de moradores da Vila Conceição I">
+        <div class="chapter__reading-column">
+          <h2 class="chapter__title">O rádio como testemunha da história de moradores da Vila Conceição I</h2>
+
+          <p>Era 10 de outubro de 2026. À sombra de uma mangueira, em uma tarde de sábado, enquanto o sol se despedia no horizonte, o lavrador Manoel Ferreira Cesar, de 72 anos, natural de Campo Grande, em Alagoas, e morador da Vila Conceição I há 30 anos, compartilhou experiências marcadas por afeto, amor e companheirismo em sua relação com o rádio.</p>
+
+          <!-- FOTO 2 -->
+          <figure class="media-container media-container--photo media-container--wide" data-media-ref="foto-02">
+            <div class="media-placeholder media-placeholder--photo">
+              <img src="assets/images/foto-2-manoel.webp" />
+            </div>
+            <figcaption class="media-caption">Manoel e sua companhia de longa data, o rádio.</figcaption>
+          </figure>
+
+          <p>A conversa aconteceu em frente à minha casa na roça, a Chácara Nazareno. Eu já havia tentado várias vezes encontrar o agricultor Manoel em sua residência, na comunidade, mas sem sucesso. A dificuldade tinha uma explicação: ele é um homem da roça, cuja rotina é marcada pelo trabalho no campo.</p>
+
+          <p>Por isso, fiquei na expectativa, à espera de que ele passasse pela estrada rural que dá acesso à sua plantação e segue em frente à minha chácara. E não deu outra! Minha irmã, Eliene, avistou-o montado em seu jumento, carinhosamente chamado de Brilhoso, seu fiel companheiro, há dez anos, nas idas e vindas diárias à roça.</p>
+
+          <p>Manoel contou que encontrou Brilhoso ferido no caminho para a roça. Recolheu o animal e cuidou dele até que se recuperasse. Na época, esperava que o dono aparecesse para buscá-lo, mas isso nunca aconteceu. Com o passar do tempo, o jumento tornou-se seu companheiro de jornada, presente na rotina de trabalho no campo.</p>
+
+          <!-- FOTO 3 -->
+          <figure class="media-container media-container--photo" data-media-ref="foto-03">
+            <div class="media-placeholder media-placeholder--photo"></div>
+            <img src="assets/images/foto-3-manoel.webp" />
+            <figcaption class="media-caption">Brilhoso, o jumento e fiel companheiro de seu Manoel Ferreira na labuta diária do campo.</figcaption>
+          </figure>
+
+          <p>Minha irmã chamou seu Manoel Ferreira Cesar e explicou que eu gostaria de conversar com ele. Prontamente, o agricultor atendeu e entrou na chácara, pois já sabia do assunto. Em seguida, amarrou Brilhoso ao tronco da mangueira e começou a contar sua história com o rádio.</p>
+
+          <p>Seu Manoel é magro, de pele clara, olhos pretos, barba e cabelos grisalhos, usa um chapéu de couro que compõe sua aparência de homem do campo. Sua pele, um pouco avermelhada, parece carregar as marcas dos longos dias de trabalho sob o sol.</p>
+
+          <p>Durante a conversa, ele contou que o rádio está presente em sua vida desde a infância, quando acompanhava o pai, que já tinha o hábito de ouvir esse meio de comunicação. Segundo Manoel, sua relação com o rádio se fortaleceu aos 16 anos e permanece viva até hoje.</p>
+
+          <!-- VÍDEO 2 -->
+          <figure class="media-container media-container--video">
+            <div class="video-player__frame">
+              <iframe class="video-player__element" src="https://www.youtube.com/embed/BXTLhI_xo5Y?si=AC-tOLv493HyWr5w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <figcaption class="media-caption">Detalhes da juventude e histórias vividas por seu Manoel com o rádio, lembranças que o tempo não apagou e que ele nunca esqueceu.</figcaption>
+          </figure>
+
+          <p>Ele afirma que seu primeiro aparelho funcionava com três pilhas da marca Rayovac. Por meio do rádio, ouve músicas, acompanha as horas e se mantém informado sobre os acontecimentos do Brasil. Para ele, o aparelho é mais do que uma fonte de informação e entretenimento: é um companheiro que atravessa diferentes fases de sua vida e permanece presente em seu cotidiano.</p>
+
+          <blockquote class="pull-quote">
+            <p>O rádio é um portador que conta histórias e é uma diversão do começo da vida da gente</p>
+            <cite>— seu Manoel</cite>
+          </blockquote>
+        </div>
+      </article>
+
+      <!-- ============================================= -->
+      <!-- SUBSEÇÃO 1.1 — Memórias que o tempo não apaga (páginas 3-5) -->
+      <!-- ============================================= -->
+      <article class="chapter chapter--subsection" id="capitulo-2" data-chapter-title="Memórias que o tempo não apaga">
+        <div class="chapter__reading-column">
+          <h2 class="chapter__title">Memórias que o tempo não apaga</h2>
+
+          <!-- FOTO 4 — ilustração (Pinterest) -->
+          <figure class="media-container media-container--photo" data-media-ref="foto-04">
+            <div class="media-placeholder media-placeholder--photo">
+              <img src="assets/images/foto-4-ilustracao-de-radio.webp" />
+              <span class="media-placeholder__badge">Imagem ilustrativa</span>
+            </div>
+            <figcaption class="media-caption">Fonte: Pinterest</figcaption>
+          </figure>
+
+          <p>Entre as lembranças que seu Manoel guarda dessa relação com o rádio está a voz de Pajeú, radialista da Rádio Palmeira dos Índios, em Alagoas, que marcou sua memória nas décadas de 1970 e 1980. Segundo ele o locutor despertava os nordestinos nas primeiras horas da madrugada, tornando-se uma presença familiar para os ouvintes daquela época.</p>
+
+          <p>Pajeú tinha como costume contar histórias em versos no rádio. Confira aqui um pouco da performance dele:</p>
+
+          <!-- ÁUDIO 2 -->
+          <div class="media-container media-container--audio js-audio-player" data-media-ref="audio-02">
+            <!-- O player será injetado aqui pelo JS -->
+            <p class="media-caption">O matuto no futebol. Fonte: Youtube, Anchieta Gueiros.</p>
+          </div>
+
+          <p>Ao recordar esse período, Manoel começa a cantarolar os versos de uma música que ouviu no rádio e que marcou sua vida. A melodia parece trazê-lo de volta à juventude. Com entusiasmo, ele recita um trecho da canção:</p>
+
+          <blockquote class="lyric-quote">
+            <p>"Eita danadinha dos zóio matadô / eu não troco o mundo pelo teu amor. / Eu já fiz promessa com o protetor / pra que ela volte para o nosso amor. / Se ela voltar alegre como o vento / eu chamo o seu vigário e faço o casamento."</p>
+          </blockquote>
+
+          <p>A música, conforme as informações sobre a gravação, integra o repertório do álbum Forró do Bom, lançado em disco de vinil pela gravadora e fábrica de discos Rozenblit, no final da década de 1960. A obra é atribuída a Agripino Aroeira e Onildo Almeida. Essa canção permanece viva nas lembranças do agricultor. Mais do que recordar uma música antiga, Manoel revive uma época em que o rádio fazia parte de sua rotina e dava voz aos sentimentos que ele carregava.</p>
+
+          <p>Pergunto o que aquela música representava para ele naquele tempo. A resposta revela que a lembrança vai muito além da melodia: ao ouvi-la, ele se recordava de sua noiva, a mulher com quem se casou e com quem compartilha a vida há 56 anos.</p>
+
+          <!-- VÍDEO 3 -->
+          <figure class="media-container media-container--video">
+            <div class="video-player__frame">
+              <iframe class="video-player__element" src="https://www.youtube.com/embed/e6qd_0R8hTU?si=z3hIgmvd7_IFAtz8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <figcaption class="media-caption">A música que faz seu Manoel recordar seu único e verdadeiro amor: sua esposa, com quem compartilha uma vida de amor e companheirismo há cinco décadas.</figcaption>
+          </figure>
+
+          <p>Assim, entre versos cantados e recordações, o rádio revela parte da história de amor de Manoel. Uma história em que a música atravessou o tempo, acompanhou o nascimento de um sentimento e permanece guardada na memória de quem encontrou, nas ondas sonoras, a trilha de sua própria vida.</p>
+
+          <p>Apesar de todo esse encantamento pelo rádio, que continua sendo seu companheiro inseparável, Manoel revela que nunca telefonou para uma emissora, nunca enviou cartas a programas radiofônicos e nunca visitou um estúdio de rádio. Sua relação com o veículo se construiu de outra maneira: pela escuta diária, pelas músicas, pelas notícias e pela companhia que encontra nas ondas sonoras.</p>
+        </div>
+      </article>
+
+      <!-- ============================================= -->
+      <!-- CAPÍTULO 2 — O rádio, companheiro de todas as horas (página 5) -->
+      <!-- ============================================= -->
+      <article class="chapter" id="capitulo-3" data-chapter-title="O rádio, companheiro de todas as horas">
+        <div class="chapter__reading-column">
+          <h2 class="chapter__title">O rádio, companheiro de todas as horas</h2>
+
+          <p>Pergunto se a rádio teve alguma participação no processo de formação da Vila Conceição I. Seu Manoel é categórico ao afirmar que não participou desse processo. Segundo ele, adquiriu sua terra, há 30 anos, por meio de um contrato de compra e venda com o primeiro possuidor do lote. Atualmente, mantém no local sua criação de gado e suas plantações.</p>
+
+          <p>A relação de Manoel com o rádio permanece como parte importante de sua história pessoal. A rotina começa cedo: ele acorda às quatro horas da manhã e liga o aparelho enquanto toma café. Depois, coloca o rádio na bolsa, monta em Brilhoso e segue para a roça. Assim, entre o trabalho no campo e as tarefas diárias, o som do rádio continua acompanhando seus passos. Durante a labuta na roça, mantém o aparelho ligado para acompanhar as notícias, ouvir músicas e se orientar pelas horas.</p>
+
+          <p>Nem mesmo a chegada de novas tecnologias, como o celular e a televisão, mudou sua preferência. Embora reconheça que a televisão permite ver as imagens enquanto apresenta as notícias, Manoel não abre mão de seu velho companheiro. Para ele, o rádio continua ocupando um lugar especial, insubstituível, em sua rotina e em suas lembranças.</p>
+
+          <blockquote class="pull-quote">
+            <p>O rádio está em primeiro lugar, nunca vou esquecer o rádio. Eu amo o rádio, eu gosto do rádio. Pode ter a televisão, pode ter o celular, pode ter o relógio, mas o meu rádio em primeiro lugar.</p>
+            <cite>— seu Manoel</cite>
+          </blockquote>
+
+          <!-- ÁUDIO 3 -->
+          <div class="media-container media-container--audio js-audio-player" data-media-ref="audio-03">
+            <!-- O player será injetado aqui pelo JS -->
+            <p class="media-caption">O tempo passou, novas tecnologias chegaram, mas o rádio continua ocupando um lugar especial na vida de seu Manoel.</p>
+          </div>
+
+          <p>A declaração sintetiza uma relação construída ao longo de décadas. Para Manoel, o rádio não é apenas um aparelho eletrônico: é presença, companhia e memória. Está com ele ao amanhecer, durante o trabalho na roça e nas lembranças de uma juventude em que uma canção era capaz de fazê-lo recordar a mulher amada. Mesmo sem nunca ter participado de um programa ou entrado em um estúdio, ele construiu com o rádio um vínculo particular, feito de escuta, afeto e fidelidade.</p>
+        </div>
+      </article>
+
+      <!-- ============================================= -->
+      <!-- CAPÍTULO 3 — Quando ouvir rádio era um encontro coletivo (páginas 6-8) -->
+      <!-- ============================================= -->
+      <article class="chapter" id="capitulo-4" data-chapter-title="Quando ouvir rádio era um encontro coletivo">
+        <div class="chapter__reading-column">
+          <h2 class="chapter__title">Quando ouvir rádio era um encontro coletivo</h2>
+
+          <p>
+            Aos 81 anos, Maria Querubina da Silva Neta carrega na própria trajetória as marcas da luta e da resistência. Lavradora, mãe solo de quatro filhas e avó de três netos, nasceu em Santo Antônio dos Lopes, no Maranhão, e chegou a Imperatriz em 1971. Na cidade, começou a participar das Comunidades Eclesiais de Base (CEBs) e do Sindicato dos Trabalhadores Rurais de Imperatriz, do qual permanece membro ativo. Sua história se entrelaça à organização dos trabalhadores, à luta por direitos e à
+            construção da comunidade Vila Conceição I, onde vive há 39 anos e se tornou uma das principais lideranças.
+          </p>
+
+          <!-- FOTO 5 -->
+          <figure class="media-container media-container--photo media-container--wide" data-media-ref="foto-05">
+            <div class="media-placeholder media-placeholder--photo">
+              <img src="assets/images/foto-5-querubina.webp" />
+            </div>
+            <figcaption class="media-caption">É na sala de casa que Maria Querubina revisita suas memórias e compartilha experiências vividas ao lado do rádio.</figcaption>
+          </figure>
+
+          <p>
+            Muito antes de participar das mobilizações coletivas e da luta por direitos, Querubina já havia descoberto outra forma de se conectar com o mundo: o rádio. Na infância e na juventude, em Santo Antônio dos Lopes, o aparelho era um bem raro, ao qual poucos moradores tinham acesso. Ainda assim, bastava alguém ligar o rádio para que outras pessoas se aproximassem. Em torno daquele pequeno aparelho, vozes distantes atravessavam fronteiras e despertavam a curiosidade de quem, muitas vezes,
+            não tinha outra maneira de acompanhar o que acontecia além de sua própria realidade.
+          </p>
+
+          <blockquote class="pull-quote">
+            <p>Eram poucas pessoas que tinham rádio e, quando a gente escutava, achava uma coisa muito interessante, porque, do outro lado do mundo, a gente estava ouvindo o pessoal falando</p>
+            <cite>— Maria Querubina</cite>
+          </blockquote>
+
+          <p>
+            Na casa de sua família, não havia rádio. Segundo ela, apenas dois moradores de sua cidade natal possuíam o aparelho, cujo preço dificultava o acesso. Para ouvir a programação, Querubina se reunia com cerca de 20 pessoas na residência de um desses moradores. O que hoje pode parecer um hábito simples era, naquele tempo, uma experiência compartilhada: vizinhos se encontravam para ouvir músicas, acompanhar notícias e descobrir, pelas ondas sonoras, acontecimentos de lugares distantes.
+          </p>
+
+          <p>Entre as emissoras que acompanhava estava a Rádio Nacional da Amazônia. Querubina passava horas diante do rádio, atenta às vozes dos locutores e às informações transmitidas. Entre seus preferidos estavam Edelson Moura e Márcia Ferreira. Embora não conhecesse pessoalmente os apresentadores, sabia seus nomes e reconhecia a presença familiar de suas vozes.</p>
+
+          <p>"Edelson Moura e Márcia ficaram conhecidos no mundo inteiro só através daquela zoada do rádio. A gente não via, mas sabia o nome deles. 'Vamos ouvir o programa da Márcia Ferreira mais o Edelson Moura'", conta.</p>
+
+          <p>Ao tentar recuperar as lembranças musicais daquele período, Querubina já não consegue recordar muitas canções. Uma delas, porém, ressurge em sua memória: Obrigada ao Homem do Campo, música do repertório sertanejo de raiz, composta pela dupla Dom e Ravel, em 1971. A canção também ficou famosa na voz da dupla sertaneja César e Paulinho, além de ter sido gravada por outros artistas, como Sérgio Reis.</p>
+
+          <p>Durante a entrevista, Maria Querubina se arrisca a cantar alguns versos, enquanto relembra a época em que era mais jovem. Sua fala também revela certa mágoa ao afirmar que, naquele período, as músicas tinham letras que expressavam gratidão e reconhecimento aos trabalhadores do campo, algo que, em sua percepção, já não existe atualmente.</p>
+
+          <blockquote class="lyric-quote">
+            <p>Obrigado ao homem do campo pelo leite / o café e o pão / Deus abençoe os braços que fazem / o suado cultivo do chão</p>
+          </blockquote>
+
+          <!-- ÁUDIO 4 -->
+          <div class="media-container media-container--audio js-audio-player" data-media-ref="audio-04">
+            <!-- O player será injetado aqui pelo JS -->
+            <p class="media-caption">Querubina revive a alegria de ouvir uma das canções que marcaram sua juventude e sua história com o rádio.</p>
+          </div>
+
+          <p>Mas, para além das melodias, foram as notícias que mais profundamente marcaram sua relação com a rádio.</p>
+
+          <p>A programação trazia relatos sobre as condições de vida das populações do interior da Amazônia, especialmente as dificuldades de acesso à saúde e a serviços essenciais. As informações a impressionavam e provocavam angústia. Enquanto ouvia, Querubina tomava conhecimento de realidades que, embora distantes, pareciam próximas quando chegavam pela voz dos locutores.</p>
+
+          <p>"O pessoal da Amazônia não sabe o que é doutor, não sabe o que é hospital, tem muita gente doente na Amazônia. A gente ficava muito agoniada com essas notícias que eles davam", revela Querubina.</p>
+
+          <p>Naquelas reuniões em torno do rádio, ouvir era também descobrir, imaginar e se preocupar com a vida de outras pessoas. As vozes que chegavam de longe ampliavam os horizontes de quem vivia no interior maranhense e transformavam um aparelho compartilhado em uma janela para o mundo.</p>
+        </div>
+      </article>
+
+      <!-- ============================================= -->
+      <!-- CAPÍTULO 4 — Entre a companhia do rádio e o medo das notícias (páginas 8-9) -->
+      <!-- ============================================= -->
+      <article class="chapter" id="capitulo-5" data-chapter-title="Entre a companhia do rádio e o medo das notícias">
+        <div class="chapter__reading-column">
+          <h2 class="chapter__title">Entre a companhia do rádio e o medo das notícias</h2>
+
+          <p>As lembranças de Maria Querubina sobre o rádio, desde antes do processo de fundação da Vila Conceição I, revelam sentimentos que remetem ao veículo como companheiro nos afazeres diários. Por meio das vozes dos apresentadores, o rádio levava notícias e proporcionava momentos de descontração, mas também despertava medo quando as informações transmitidas chegavam aos ouvintes em tom de ameaça.</p>
+
+          <p>É o que revela Maria, ao recordar os momentos de conflito vividos pelos moradores da comunidade, durante o período da sua fundação. Naquele contexto, o rádio não servia apenas como entretenimento, mas também se tornava um instrumento capaz de despertar medo entre os posseiros recém-assentados na terra.</p>
+
+          <!-- ÁUDIO 5 -->
+          <div class="media-container media-container--audio js-audio-player" data-media-ref="audio-05">
+            <!-- O player será injetado aqui pelo JS -->
+            <p class="media-caption">A voz dos locutores ecoava pelo rádio, levando notícias que ficaram gravadas na memória de quem viveu os desafios da luta pela terra.</p>
+          </div>
+
+          <p>Outro episódio marcante na história dos moradores da Vila Conceição I revela mais uma dimensão do rádio: sua função de utilidade pública e sua capacidade de ampliar a voz das pessoas da comunidade.</p>
+
+          <p>No início da ocupação, as famílias foram retiradas da terra pela Polícia Militar, em cumprimento a uma determinação judicial, por meio de uma liminar. Os sem-terra foram despejados da Fazenda Itacira, área onde atualmente está localizada a Vila Conceição I, no dia 4 de setembro de 1987.</p>
+
+          <p>Diante da situação, os moradores recorreram aos meios de comunicação para denunciar o despejo das 250 famílias que ocupavam a terra.</p>
+
+          <p>Por meio de um comunicado enviado às emissoras de rádio da cidade, entre elas a Rádio Imperatriz, os moradores se mobilizaram para tornar a situação conhecida pela imprensa local e regional, pela população em geral e pelas autoridades.</p>
+
+          <p>A divulgação teve grande repercussão e contribuiu para que providências fossem tomadas, permitindo que as famílias retornassem à área no dia 14 de setembro do mesmo ano, após permanecerem fora dela por apenas dez dias.</p>
+
+          <!-- Linha do tempo de 1987 -->
+          <div class="timeline" aria-label="Linha do tempo de 1987">
+            <h3 class="timeline__title">1987 — Os marcos da fundação</h3>
+            <ol class="timeline__list">
+              <li class="timeline__item" data-date="1987-07-16">
+                <span class="timeline__marker timeline__marker--neutral"></span>
+                <span class="timeline__date">16 de julho</span>
+                <span class="timeline__desc">Ocupação da Fazenda Itacira — fundação da Vila Conceição I</span>
+              </li>
+              <li class="timeline__item" data-date="1987-09-04">
+                <span class="timeline__marker timeline__marker--alert"></span>
+                <span class="timeline__date">4 de setembro</span>
+                <span class="timeline__desc">Despejo das famílias pela Polícia Militar, por liminar judicial</span>
+              </li>
+              <li class="timeline__item" data-date="1987-09-14">
+                <span class="timeline__marker timeline__marker--neutral"></span>
+                <span class="timeline__date">14 de setembro</span>
+                <span class="timeline__desc">Retorno das famílias à terra, após mobilização via rádio</span>
+              </li>
+            </ol>
+          </div>
+
+          <!-- VÍDEO 4 -->
+          <figure class="media-container media-container--video">
+            <div class="video-player__frame">
+              <iframe class="video-player__element" src="https://www.youtube.com/embed/cJvNiVc9icE?si=mV3LhVZ5zcUWpXpi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <figcaption class="media-caption">Histórias de quem vivenciou a luta pela terra e reconhece a importância da comunicação na formação da comunidade.</figcaption>
+          </figure>
+
+          <p>Assim, entre o medo provocado pelas notícias e a esperança despertada pela mobilização, o rádio ocupou um lugar importante na trajetória da Vila Conceição I. Se, em determinados momentos, suas ondas sonoras eram percebidas como uma ameaça, em outros, tornavam-se um caminho para denunciar injustiças e fazer ecoar a voz dos posseiros.</p>
+
+          <p>Atualmente, a lavradora Maria Querubina, não possui rádio em casa, divide o tempo assistindo noticiário da TV aberta e interagindo entre uma ligação e outra pelo celular. Mas afirma sentir falta de um rádio, principalmente quando vai para a mata quebrar coco, e planeja comprar um aparelho novo, para ser sua companhia no trabalho de extração da amêndoa do babaçu.</p>
+        </div>
+      </article>
+
+      <!-- ============================================= -->
+      <!-- CAPÍTULO 5 — Rádio, mais do que um sonho, uma paixão (páginas 9-13) -->
+      <!-- ============================================= -->
+      <article class="chapter" id="capitulo-6" data-chapter-title="Rádio, mais do que um sonho, uma paixão">
+        <div class="chapter__reading-column">
+          <h2 class="chapter__title">Rádio, mais do que um sonho, uma paixão</h2>
+
+          <p>Aos 16 anos, em 1987, dei os primeiros passos em direção a um sonho que, até então, existia mais na imaginação do que na realidade: ser radialista e repórter.</p>
+
+          <p>Não me recordo exatamente do mês nem do dia, mas guardo na memória a decisão de sair de casa sozinha e ir ao encontro daquele sonho. Peguei o transporte coletivo e segui até a Rua Simplício Moreira, em Imperatriz, Maranhão, onde funcionava a Rádio Imperatriz, pioneira na radiodifusão da cidade.</p>
+
+          <p>Naquele momento, eu ainda não sabia que aquela visita marcaria o início de uma relação com o rádio que atravessaria décadas e permaneceria viva em minhas lembranças.</p>
+
+          <!-- FOTO 6 -->
+          <figure class="media-container media-container--photo media-container--wide" data-media-ref="foto-06">
+            <div class="media-placeholder media-placeholder--photo">
+              <img src="assets/images/foto-6-rita-na-radio-imperatriz.webp" />
+            </div>
+            <figcaption class="media-caption">Rita Maria, atuando como locutora em uma transmissão ao vivo no parque de Exposições Agropecuária de Imperatriz-MA. — Fonte: Acervo Pessoal</figcaption>
+          </figure>
+
+          <p>À época, o diretor artístico da emissora era Manoel Cecílio Ribeiro, que também comandava o "Rádio Festa", programa líder de audiência no período da manhã. O rádio estava presente no cotidiano dos imperatrizenses e chegava às casas pela voz de seus comunicadores, estabelecendo uma relação de proximidade com os ouvintes que ultrapassava os limites do aparelho receptor.</p>
+
+          <p>Ainda está muito presente na minha memória a primeira vez que entrei na Rádio Imperatriz. Recordo-me de cada detalhe. Ao chegar ao prédio, encontrei uma escada com cerca de dez degraus que dava acesso à recepção. Subi e, logo na entrada, deparei-me com dois bancos de cimento queimado, cuidadosamente lustrados, cuja aparência me chamou a atenção pelo brilho. Um deles ficava de frente para a escada de quem chegava à emissora; o outro, na lateral, diante do balcão da recepção.</p>
+
+          <p>Foi ali que encontrei uma moça simpática, a recepcionista, Isabel Cristina. Era uma mulher branca, de olhos escuros e cabelos encaracolados, que lhe chegavam ao meio das costas.</p>
+
+          <div class="dialogue-block">
+            <p>— Meu nome é Rita Maria. Quero uma oportunidade para trabalhar na rádio. Eu falo com quem?</p>
+            <p>A recepcionista respondeu:</p>
+            <p>— Com o diretor artístico, Manoel Cecílio. Mas ele está no ar. Espere ele terminar o programa. Quando ele sair, vejo se ele pode receber você.</p>
+          </div>
+
+          <p>
+            A espera parecia interminável. Eu havia chegado cedo e estava ansiosa para falar com Manoel Cecílio, um locutor que, para mim e para grande parte da cidade, era uma referência. Ele comandava um dos programas de maior audiência da emissora e também apresentava, em parceria com o proprietário da rádio e diretor-geral, Moacyr Spósito, o jornal "890", transmitido ao meio-dia. A Rádio Imperatriz foi inaugurada em 28 de outubro de 1978, transmitindo ao vivo seu primeiro programa,
+            apresentado por Moacyr. Confira o áudio do primeiro programa:
+          </p>
+
+          <!-- ÁUDIO 6 -->
+          <div class="media-container media-container--audio js-audio-player" data-media-ref="audio-06">
+            <!-- O player será injetado aqui pelo JS -->
+            <p class="media-caption">Transmissão do primeiro programa Rádio Imperatriz, com a locução de Moacyr Spósito - diretor da Rádio Imperatriz Sociedade Ltda. — Fonte: JOIMP.</p>
+          </div>
+
+          <p>Quando o programa terminou, Manoel Cecílio me recebeu em uma sala próxima à recepção. Foi cordial, mas logo deixou claro que não seria tão simples conseguir aquela oportunidade.</p>
+
+          <p>Não perdi tempo. Disse a ele que queria trabalhar no rádio como repórter. A primeira pergunta foi sobre a minha idade. Respondi que tinha 16 anos.</p>
+
+          <div class="dialogue-block">
+            <p>— Não posso lhe dar um estágio. Você é muito nova. Vá estudar — disse ele.</p>
+          </div>
+
+          <p>Insisti. Expliquei que trabalhar com comunicação era minha grande paixão e que poderia conciliar os estudos com o trabalho, caso ele me desse uma oportunidade.</p>
+
+          <p>Depois de me ouvir, Manoel Cecílio respondeu:</p>
+
+          <div class="dialogue-block">
+            <p>— Volte amanhã com seu pai. Ele precisa autorizar seu estágio, porque você é menor de idade.</p>
+          </div>
+
+          <p>Saí daquela sala em direção à minha casa sem acreditar completamente que o meu sonho poderia se realizar. Desci as escadas quase flutuando. Estava em êxtase.</p>
+
+          <p>No dia seguinte, meu pai foi comigo à rádio e assinou o documento autorizando meu estágio como repórter. Naquela mesma semana, comecei meu aprendizado no departamento de jornalismo da emissora, um setor bastante movimentado.</p>
+
+          <!-- FOTO 7 -->
+          <figure class="media-container media-container--photo" data-media-ref="foto-07">
+            <div class="media-placeholder media-placeholder--photo">
+              <img src="assets/images/foto-7-rita-na-mesa.webp" />
+            </div>
+            <figcaption class="media-caption">Local onde escrevia e transformava as histórias em reportagens. — Fonte: Acervo Pessoal</figcaption>
+          </figure>
+
+          <p>O chefe de redação era o radialista e jornalista Arimatéia Júnior, que comandou o jornal "890" por alguns anos.</p>
+
+          <p>Foram três meses de estágio, sem remuneração. Naquele período, eu saía todos os dias para fazer entrevistas para o jornal. Recebia a pauta pronta, com os assuntos do dia, o nome dos entrevistados e o local onde deveria encontrá-los.</p>
+
+          <p>Eu usava um gravador de fita cassete grande, movido a pilhas, que carregava comigo durante as entrevistas. Foi assim que comecei a conhecer pessoas e histórias que ajudaram a construir minha relação com o jornalismo e com o rádio.</p>
+
+          <p>Algumas personalidades daquele período permanecem vivas na minha memória. Entre elas, o presidente da subseção da OAB de Imperatriz, doutor Aureliano Neto, e Renato Cortez Moreira, que, na década de 1990, ocupou o cargo de diretor da Receita Federal em Imperatriz. Mais tarde, Renato Cortez Moreira deixou o cargo e concorreu à Prefeitura de Imperatriz, sendo eleito. Seu mandato, porém, foi interrompido por sua morte, em 6 de outubro de 1993, nas proximidades de sua residência.</p>
+
+          <p>Outra figura que eu entrevistava com frequência era o vereador do PT Valdinar Barros. Ele estava sempre disponível e fazia parte das pautas praticamente todas as semanas, por ser, à época, considerado o único vereador de oposição com atuação no legislativo municipal naquele período.</p>
+
+          <p>É assim que minha história com o rádio foi se construindo. Em 1997, ano em que nasceu meu filho mais velho, Vinícius, ganhei a oportunidade de apresentar um programa próprio na rádio, chamado "De Mulher para Mulher".</p>
+
+          <!-- FOTO 8 — documento -->
+          <figure class="media-container media-container--document js-document-viewer" data-media-ref="foto-08">
+            <div class="media-placeholder media-placeholder--document">
+              <img src="assets/images/foto-8-jornal-escaneado-programa.webp" />
+            </div>
+            <figcaption class="media-caption">Histórias que ficaram guardadas na memória e registradas nas páginas dos jornais. — Fonte: Jornal o Progresso, edição de Domingo, 25 de Abril de 1999.</figcaption>
+          </figure>
+
+          <p>O programa era ao vivo e ia ao ar aos domingos, das 13h às 15h. Depois de um ano, passei a apresentá-lo também aos sábados, no período da manhã. No sábado, ganhei um reforço maravilhoso: os locutores Valdinez Lima e Carlos Ribeiro passaram a apresentar o programa comigo.</p>
+
+          <p>Era uma revista eletrônica, com variedade de assuntos, informações de interesse comunitário, notícias factuais e entrevistas com personalidades, principalmente mulheres.</p>
+
+          <p>Eu atendia a pedidos de alôs e músicas por meio de cartas e ligações telefônicas. Nesse período, pude compreender um pouco mais dessa relação de afetividade e carinho que os ouvintes estabelecem com os comunicadores. Era uma relação carregada de afeto, sentimentos e proximidade, uma interação que acontecia naturalmente entre quem estava diante do microfone e quem acompanhava a programação do outro lado do rádio.</p>
+
+          <p>
+            Os ouvintes criavam uma espécie de intimidade com os apresentadores dos programas. Aos poucos, passávamos a integrar seus cotidianos. Era uma relação de amizade. Lembro-me, especialmente, de dois ouvintes: Joana Darc, do Sacolão Central, localizado na Rua Simplício Moreira, que ainda permanece em funcionamento, e seu Zé, vigia do setor mercadinho. Essas duas figuras ligavam para todas as edições do programa. Com o tempo, bastava ouvir suas vozes para que eu já soubesse quem estava do
+            outro lado da linha. Era como se fizessem parte da minha família.
+          </p>
+        </div>
+      </article>
+
+      <!-- ============================================= -->
+      <!-- SUBSEÇÃO 5.1 — Reencontro com Joana Darc (páginas 13-14) -->
+      <!-- ============================================= -->
+      <article class="chapter chapter--subsection" id="capitulo-7" data-chapter-title="Reencontro com Joana Darc">
+        <div class="chapter__reading-column">
+          <h2 class="chapter__title">Reencontro com Joana Darc</h2>
+          <!-- FOTO 9 -->
+          <figure class="media-container media-container--photo" data-media-ref="foto-09">
+            <div class="media-placeholder media-placeholder--photo">
+              <img src="assets/images/foto-9-joana-darc.webp" />
+            </div>
+            <figcaption class="media-caption">Joana Darc, uma das ouvintes do programa De Mulher pra Mulher.</figcaption>
+          </figure>
+
+          <p>Com Joana Darc da Costa Sousa, de 75 anos, natural da cidade de Luís Gomes, Rio Grande do Norte, minha ouvinte da época da Rádio Imperatriz, criei um laço de amizade que ultrapassou a voz e o microfone.</p>
+
+          <p>Recordo-me de que ela foi à rádio pela primeira vez para me conhecer e logo construímos uma relação de amizade. Como trabalhava na mesma rua onde estava localizado o prédio da emissora, a cerca de duzentos metros de distância, eu costumava passar no Sacolão Central, ao terminar o programa, para conversar com Joana.</p>
+
+          <p>Quando deixei a rádio, no final dos anos 2000, já não trabalhava como locutora. Decidi empreender e criei meu próprio negócio: uma agência de publicidade. Nesse período, perdi o contato com Joana. Só agora consegui reencontrá-la.</p>
+
+          <p>Foi fácil encontrar a ouvinte Joana, fui ao seu antigo local de trabalho, o Sacolão Central, onde ela trabalhou por 25 anos. Não foi tão difícil conseguir seu contato. No sacolão, encontrei seu irmão, o senhor Neto, proprietário do estabelecimento. Conversei com ele, que logo me passou o contato de Joana Darc. Fiz uma ligação, marquei um encontro e fui até sua casa, no bairro Bacuri, na cidade de Imperatriz, Maranhão.</p>
+
+          <!-- FOTO 10 -->
+          <figure class="media-container media-container--photo media-container--wide" data-media-ref="foto-10">
+            <div class="media-placeholder media-placeholder--photo">
+              <img src="assets/images/foto-10-rita-e-joana-darc.webp" />
+            </div>
+            <figcaption class="media-caption">Um reencontro carregado de emoção, que aproximou novamente duas histórias ligadas pelo rádio: a da locutora e a da ouvinte.</figcaption>
+          </figure>
+
+          <p>Quando nos vimos, a emoção tomou conta de nós. Cumprimentamo-nos com um longo abraço. Joana me ofereceu um café, que aceitei, e expliquei que gostaria que ela desse um depoimento, contando por que ligava para todas as edições do meu programa.</p>
+
+          <p>Confesso que a resposta me surpreendeu muito. Joana Darc me disse que nunca havia esquecido de mim e nem da minha voz.</p>
+
+          <blockquote class="pull-quote">
+            <p>Rita Maria, pra falar a verdade, eu nunca te esqueci, nem um minuto. Às vezes, passa aquele filme, aí lembro: meu Deus, será que ainda vou ver aquela criatura? Eu amava ligar pra ti, pra te ouvir, pra ouvir tua voz.</p>
+            <cite>— Joana Darc</cite>
+          </blockquote>
+
+          <!-- VÍDEO 5 -->
+          <figure class="media-container media-container--video">
+            <div class="video-player__frame">
+              <iframe class="video-player__element" src="https://www.youtube.com/embed/ioM0TMJlHsI?si=P8mAYW6yi5CDcDPe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <figcaption class="media-caption">A emoção de Joana ao falar da amizade entre ouvintes e locutores mostra que o rádio vai além da informação: aproxima pessoas, ameniza a solidão e cria vínculos afetivos.</figcaption>
+          </figure>
+
+          <p>Naquele momento, as lágrimas corriam pelo rosto da ouvinte. Fiquei muito emocionada e chorei também. Nunca imaginei que aquelas lembranças fossem tão significativas para Joana Darc e para mim também. O reencontro mostrou que a relação construída por meio do rádio havia deixado marcas profundas, capazes de resistir à passagem do tempo e à distância.</p>
+
+          <p>Não consegui encontrar o ouvinte Zé Vigia, mas permanecem as lembranças e a saudade de um tempo em que ligar para uma locutora representava muito mais do que uma troca de palavras. Era uma demonstração de afeto e carinho, que se transformava em amizade, construída pela presença diária de uma voz que acompanhava os ouvintes em suas atividades cotidianas e, aos poucos, passava a fazer parte de suas vidas.</p>
+        </div>
+      </article>
+
+      <!-- ============================================= -->
+      <!-- CAPÍTULO 6 — Escreva uma carta, meu amor (páginas 14-17) -->
+      <!-- ============================================= -->
+      <article class="chapter" id="capitulo-8" data-chapter-title="Escreva uma carta, meu amor: quando a distância cabia dentro de um envelope">
+        <div class="chapter__reading-column">
+          <h2 class="chapter__title">Escreva uma carta, meu amor: quando a distância cabia dentro de um envelope</h2>
+
+          <p>Confesso que comecei a escrever esta parte do texto tomada pela emoção, ao relembrar como, na década de 1990, o desejo de proximidade muitas vezes era traduzido em uma simples carta enviada a um programa de rádio.</p>
+
+          <!-- FOTO 11 -->
+          <figure class="media-container media-container--document js-document-viewer" data-media-ref="foto-11">
+            <div class="media-placeholder media-placeholder--document">
+              <img src="assets/images/compilado-cartas.webp" />
+            </div>
+            <figcaption class="media-caption">Palavras escritas que faziam a ponte entre o ouvinte e a locutora. - Veja mais cartas em nossa galeira no fim da reportagem</figcaption>
+          </figure>
+
+          <p>É justo, portanto, contar essa história sobre a relação de proximidade construída entre ouvintes e locutores por meio das cartas, tendo como referência um trecho da canção gravada por Roberto Carlos, em 1965, durante a Jovem Guarda, composta pelos irmãos Antônio Ladislau da Silva e Sebastião Ladislau da Silva: "Escreva uma carta, meu amor, e diga alguma coisa, por favor". Confira a música completa, a seguir.</p>
+
+          <!-- ÁUDIO 7 -->
+          <div class="media-container media-container--audio js-audio-player" data-media-ref="audio-07">
+            <!-- O player será injetado aqui pelo JS -->
+            <p class="media-caption">Fonte: Youtube.</p>
+          </div>
+
+          <p>A canção, de caráter romântico, também nos remete a uma forma de comunicação que marcou a vida de muitas pessoas. Antes das mensagens instantâneas, dos aplicativos e das redes sociais, era por meio do papel, da tinta e do tempo de espera que sentimentos, notícias, pedidos e histórias chegavam às mãos de quem estava do outro lado do rádio.</p>
+
+          <p>Naquele tempo, uma carta enviada ao programa não era apenas uma mensagem. Era uma forma de estar presente, de ser ouvido e, de alguma maneira, de pertencer àquele universo sonoro que entrava diariamente nas casas.</p>
+
+          <p>No meu programa, na Rádio Imperatriz, as cartas eram lidas no ar e aproximavam pessoas separadas pela distância. Bastava que eu lesse as palavras escritas e transmitisse os recados para que o destinatário, do outro lado do rádio, sentisse que aquela mensagem havia atravessado quilômetros para chegar até ele, levando carinho, acolhimento e saudade.</p>
+
+          <p>Os conteúdos eram variados: pedidos musicais, alôs, declarações de afeto e recados destinados a familiares que viviam longe. Algumas cartas traziam listas com vários nomes de pessoas de diferentes localidades, numa tentativa de alcançar, pela voz da locutora, amigos e parentes espalhados pela região.</p>
+
+          <p>Essa troca de mensagens revelava a dimensão da comunicação estabelecida pela Rádio Imperatriz, cuja transmissão alcançava mais de 70 cidades, segundo minhas lembranças, em áreas do Maranhão, do Pará e do então norte de Goiás, atual Tocantins. Assim, a emissora ultrapassava fronteiras geográficas e fazia do rádio um elo entre pessoas, famílias e comunidades.</p>
+
+          <p>Hoje, ao reencontrar essas cartas enviadas pelos meus ouvintes, percebo que recordá-las vai além da nostalgia. É compreender a dimensão das relações interpessoais e afetivas construídas por meio do rádio e preservadas no papel, atravessando décadas.</p>
+
+          <p>Dessa relação de carinho e proximidade, guardo, em meu arquivo pessoal algumas cartas que recebi durante os anos em que estive à frente do microfone. São registros de uma época em que o rádio não apenas informava e entretinha, mas também aproximava pessoas, comunidades e histórias.</p>
+
+          <p>Uma delas foi escrita por Ângela Oliveira de Sousa, em 6 de agosto de 1998, do Centro do Raimundão, em Buritirana, no Maranhão. Endereçada ao programa de "Mulher Pra Mulher" apresentado por mim e os locutores Valdineis Lima e Carlos Ribeiro, a carta trazia um pedido musical e, ao mesmo tempo, uma longa lista de nomes de pessoas para quem a música deveria ser oferecida:</p>
+
+          <!-- Visualizador de carta — transcrição Ângela -->
+          <div class="letter-viewer">
+            <div class="letter-viewer__image media-placeholder media-placeholder--document js-document-viewer" data-media-ref="foto-11" data-transcript-ref="transcript-angela-01">
+              <img src="assets/images/foto-12-carta-angela_frente_.webp" />
+            </div>
+            <blockquote class="letter-viewer__transcript" id="transcript-angela-01">
+              <p>"Centro do Raimundão, Buritirana-MA, 6 de agosto de 1998.</p>
+              <p>
+                Felicidades mil! Bom dia, queridos e educados amigos Valdineis Lima, Rita Maria e Carlos Ribeiro. Tudo bem com vocês? Espero que sim. Comigo está tudo ótimo. É com muito prazer que escrevo para o nosso maravilhoso programa, somente para pedir a música 'Evidências', de Chitãozinho e Xororó. A mesma peço a vocês que não troquem. Ofereço para todos da rádio, para Vanderli, da D-20, professor Nonatinho, para todos do Tanque, Eliani, Vanuza, Vanilça, Patrícia, Maria, Valéria, Pedro,
+                Touca, Joatan, Adalberto, Jorge, Valdir e todos da Buritirana."
+              </p>
+            </blockquote>
+          </div>
+
+          <!-- ÁUDIO 8 -->
+          <div class="media-container media-container--audio js-audio-player" data-media-ref="audio-08">
+            <!-- O player será injetado aqui pelo JS -->
+            <p class="media-caption">Era tempo de esperar a locutora anunciar o nome do destinatário, abrir o envelope e ler a carta.</p>
+          </div>
+          <div class="media-container media-container--audio js-audio-player" data-media-ref="audio-09">
+            <!-- O player será injetado aqui pelo JS -->
+            <p class="media-caption">Em cada palavra, uma demonstração de carinho, saudade e amizade.</p>
+          </div>
+
+          <p>Ao reler essa carta, chama atenção não apenas o pedido musical, mas a quantidade de pessoas citadas. Cada nome carregava uma relação, uma amizade, um vínculo. O rádio funcionava como uma espécie de ponte: uma única mensagem era capaz de atravessar comunidades e alcançar diferentes pessoas ao mesmo tempo.</p>
+
+          <p>Naquele período, quando o acesso à internet ainda era inexistente para grande parte da população e o telefone não fazia parte da rotina de muitas famílias, as cartas enviadas aos programas de rádio assumiram um papel importante na comunicação entre pessoas que viviam em comunidades distantes. Por meio delas, os ouvintes mandavam recados, faziam pedidos musicais, enviavam abraços, declaravam amizades e mantinham vivos os laços com familiares e conhecidos.</p>
+
+          <p>O rádio encurtava distâncias. A voz do locutor levava a mensagem de uma comunidade a outra e devolvia ao ouvinte a sensação de estar próximo, mesmo quando havia quilômetros entre eles.</p>
+
+          <p>As cartas também revelavam a intimidade que os ouvintes construíam com os comunicadores. Era comum que, além dos pedidos musicais e dos recados, escrevessem versos, dedicatórias e palavras de carinho. Em uma das cartas que guardo, Ângela deixou uma pequena homenagem para mim:</p>
+
+          <!-- FOTO 12 -->
+          <figure class="media-container media-container--document js-document-viewer" data-media-ref="foto-12">
+            <div class="media-placeholder media-placeholder--document">
+              <img src="assets/images/foto-12-carta-angela_verso_.webp" />
+            </div>
+            <figcaption class="media-caption">Cartas que marcaram minha trajetória como locutora e preservaram a memória dos laços construídos com os ouvintes da Rádio Imperatriz.</figcaption>
+          </figure>
+
+          <blockquote class="lyric-quote">
+            <p>"Para Rita Maria, o tempo passa e o coração envelhece, mas uma boa amizade nunca se esquece."</p>
+          </blockquote>
+
+          <p>Décadas depois, o papel permanece. A tinta pode ter perdido um pouco de intensidade, mas as palavras continuam contando uma história. São fragmentos de uma época em que esperar a música tocar, ouvir o próprio nome no rádio e receber uma carta eram formas de sentir-se lembrado, reconhecido e parte de uma comunidade.</p>
+
+          <p>Mais do que cartas, esses documentos guardam memórias afetivas de uma relação que o tempo não conseguiu apagar.</p>
+        </div>
+      </article>
+
+      <!-- ============================================= -->
+      <!-- CAPÍTULO 7 — Galeria "Memórias que o rádio guardou" (página 17) -->
+      <!-- ============================================= -->
+      <article class="chapter chapter--gallery" id="capitulo-9" data-chapter-title="Memórias que o rádio guardou">
+        <div class="chapter__reading-column">
+          <h2 class="chapter__title">Memórias que o rádio guardou</h2>
+
+          <p>Esta galeria reúne fragmentos de uma história construída ao longo do tempo. São fotografias, documentos, cartas, áudios e vídeos que preservam lembranças da minha trajetória profissional na Rádio Imperatriz e das experiências compartilhadas pelos moradores da Vila Conceição I.</p>
+
+          <p>Cada registro guarda uma parte dessa relação entre o rádio e seus ouvintes, revelando como as vozes, as notícias, as músicas e as mensagens transmitidas pelas ondas sonoras atravessaram gerações e permaneceram na memória.</p>
+        </div>
+
+        <!-- Galeria -->
+        <div class="gallery" id="gallery-container">
+          <div class="gallery__filters" id="gallery-filters">
+            <button class="gallery__filter is-active" data-filter="all">Todos</button>
+            <button class="gallery__filter" data-filter="foto">Fotos</button>
+            <button class="gallery__filter" data-filter="audio">Áudios</button>
+            <button class="gallery__filter" data-filter="video">Vídeos</button>
+            <button class="gallery__filter" data-filter="carta">Cartas</button>
+          </div>
+          <div class="gallery__grid" id="gallery-grid">
+            <p class="content-pending-note">[GRADE DE 25 ITENS — a ser renderizada dinamicamente a partir de assets/media-manifest.json — Etapa 6]</p>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- SEÇÃO: SOBRE A AUTORA -->
+    <section class="about-author">
+      <div class="about-author__inner">
+        <div class="about-author__header">
+          <div class="about-author__title" id="sobre-a-autora" data-chapter-title="Sobre a autora">
+            <h2 class="chapter__title_about" id="sobre-a-aurora">Sobre a autora</h2>
+          </div>
+        </div>
+
+        <div class="about-author__content">
+          <!-- Lembre de colocar a foto real da Rita depois -->
+          <img src="assets/images/rita-perfil.webp" alt="Foto de Rita Maria da Silva Sousa" class="about-author__photo" loading="lazy" />
+
+          <div class="about-author__bio">
+            <p>Minha trajetória seguiu um caminho diferente do que talvez eu tivesse planejado. Primeiro, trabalhei, casei-me, tive filhos e dediquei-me à educação deles. Mas nunca desisti do meu maior sonho: ingressar na universidade.</p>
+            <p>Hoje, aos 55 anos, estou realizando esse sonho e me graduando em Jornalismo. Uma conquista que representa muito mais do que um diploma: simboliza persistência, coragem, superação e a certeza de que nunca é tarde para recomeçar e realizar nossos sonhos.</p>
+            <p>Essa sou eu: Rita Maria da Silva Sousa, maranhense e nordestina, com muito orgulho!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- RODAPÉ                                                  -->
+    <!-- ===================================================== -->
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <!-- Coluna 1: Expediente -->
+        <div class="site-footer__col">
+          <div class="about-author__title" id="expediente" data-chapter-title="Expediente">
+            <h3 class="chapter__title_ex" id="expediente">Expediente</h3>
+          </div>
+          <p>
+            Trabalho sobre as memórias, vivências e relações construídas em torno do rádio na Vila Conceição I, em Imperatriz (MA), produzido a partir da escuta, observação e registro de histórias de vida que revelam a importância do rádio na formação da comunidade, na luta pela terra, na construção de vínculos afetivos e na preservação das memórias coletivas. A narrativa articula experiências individuais e coletivas, abordando aspectos de identidade, comunicação, pertencimento e resistência
+            social entre passado, presente e futuro.
+          </p>
+          <p>Este trabalho foi elaborado como parte da conclusão do curso de Jornalismo do Centro de Ciências de Imperatriz (CCIM), da Universidade Federal do Maranhão (UFMA), sob orientação do Prof. Dr. Marcos Fábio Belo Matos.</p>
+
+          <div class="site-footer__meta">
+            <p>Reportagem acadêmica em formato de longform</p>
+            <p>Trabalho de Conclusão de Curso</p>
+            <p>Curso de Jornalismo — UFMA/CCIM</p>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Créditos -->
+        <div class="site-footer__col">
+          <h3 class="site-footer__title">Créditos</h3>
+
+          <div class="site-footer__credit-block">
+            <span class="site-footer__role">Autoria, apuração e redação</span>
+            <span class="site-footer__name">Rita Maria da Silva Sousa</span>
+          </div>
+
+          <div class="site-footer__credit-block">
+            <span class="site-footer__role">Orientação</span>
+            <span class="site-footer__name">Prof. Dr. Marcos Fábio Belo Matos</span>
+          </div>
+
+          <div class="site-footer__credit-block">
+            <span class="site-footer__role">Desenvolvimento do site</span>
+            <span class="site-footer__name">Laécio Rodrigues</span>
+          </div>
+
+          <div class="site-footer__credit-block">
+            <span class="site-footer__role">Fotografia e vídeos</span>
+            <span class="site-footer__name">Rita Maria da Silva Sousa<br />Arquivo pessoal dos entrevistados e da repórter</span>
+          </div>
+
+          <div class="site-footer__meta site-footer__meta--spaced">
+            <p>Dezembro de 2026<br />Imperatriz (MA)</p>
+          </div>
+        </div>
+
+        <!-- Coluna 3: Botão de voltar (Centralizado ou à direita no Desktop) -->
+        <div class="site-footer__col site-footer__col--action">
+          <a href="#topo" class="site-footer__back-to-top" aria-label="Voltar ao início da página">Voltar ao início ↑</a>
+        </div>
+      </div>
+
+      <!-- Linha de Copyright -->
+      <div class="site-footer__copyright">
+        <p>© 2026 Rita Sousa. Todos os direitos reservados. Desenvolvido por <a href="https://instagram.com/laeciorodrigues" target="_blank" rel="noopener noreferrer">Laécio Rodrigues</a>.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts serão adicionados a partir da Etapa 6 -->
+    <script type="module" src="js/media-player.js"></script>
+    <script type="module" src="js/navigation.js"></script>
+    <script type="module" src="js/animations.js"></script>
+    <script type="module" src="js/gallery.js"></script>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,566 @@
+{
+  "_titulo": "Manifesto de mídia — projeto Vozes e memórias: histórias que o rádio guardou na Vila Conceição I",
+  "_comentario_geral": "Todos os arquivos referenciados neste manifesto são PLACEHOLDERS. Nenhum arquivo físico real foi criado ou está disponível nesta etapa. Os caminhos abaixo são fictícios e semânticos, destinados a serem substituídos pelos arquivos originais pelo responsável do projeto. Nenhuma legenda aqui substitui o texto integral da reportagem — ela é um resumo de referência para localização e contexto, extraído fielmente do mapa editorial (docs/02-mapa-editorial.md), que por sua vez preserva o conteúdo do documento-fonte.",
+  "gerado_na_etapa": "ETAPA 2 — Inventário e associação das mídias",
+  "total_itens": 25,
+  "totais_por_tipo": {
+    "foto": 12,
+    "audio": 8,
+    "video": 5
+  },
+  "midias": [
+    {
+      "id": "foto-01",
+      "tipo": "foto",
+      "marcador_editorial": "FOTO 1",
+      "capitulo_relacionado": "Abertura (fundação da Vila Conceição I)",
+      "caminho_ficticio": "assets/images/foto-1-vila-conceicao.webp",
+      "descricao_fonte": "Foto atual da rua principal da Vila Conceição I (Rua 16 de Julho). O documento-fonte indica, entre parênteses, intenção de par 'foto antiga e atual' para esta legenda, sugerindo um possível comparador antes/depois.",
+      "legenda_original": "Rua 16 de Julho, na Vila Conceição I: testemunha da história, das lutas e das transformações vivenciadas pelas famílias ao longo do tempo.",
+      "credito_fonte": "Rita Maria",
+      "observacao": "Candidata a uso no componente de comparador 'antes e atual', SOMENTE SE as duas imagens (antiga e atual) do mesmo enquadramento forem fornecidas futuramente. Até lá, tratar como foto única atual.",
+      "status": "publicado"
+    },
+    {
+      "id": "foto-02",
+      "tipo": "foto",
+      "marcador_editorial": "FOTO 2",
+      "capitulo_relacionado": "O rádio como testemunha da história de moradores da Vila Conceição I",
+      "caminho_ficticio": "assets/images/foto-2-manoel.webp",
+      "descricao_fonte": "Seu Manoel Ferreira Cesar sentado, com o rádio sobre as pernas.",
+      "legenda_original": "Manoel e sua companhia de longa data, o rádio.",
+      "credito_fonte": "foto-2-manoel.webp",
+      "observacao": null,
+      "status": "publicado"
+    },
+    {
+      "id": "foto-03",
+      "tipo": "foto",
+      "marcador_editorial": "FOTO 3",
+      "capitulo_relacionado": "O rádio como testemunha da história de moradores da Vila Conceição I",
+      "caminho_ficticio": "assets/images/foto-3-manoel.webp",
+      "descricao_fonte": "Seu Manoel ao lado do jumento Brilhoso, seu companheiro de trabalho na roça.",
+      "legenda_original": "Brilhoso, o jumento e fiel companheiro de seu Manoel Ferreira na labuta diária do campo.",
+      "credito_fonte": "Não especificado no documento-fonte.",
+      "observacao": null,
+      "status": "publicado"
+    },
+    {
+      "id": "foto-04",
+      "tipo": "foto",
+      "marcador_editorial": "FOTO 4",
+      "capitulo_relacionado": "Memórias que o tempo não apaga (subseção)",
+      "caminho_ficticio": "assets/images/foto-4-ilustracao-de-radio.webp",
+      "descricao_fonte": "Ilustração de um rádio antigo, usada para ambientar a seção de memórias musicais de Seu Manoel.",
+      "legenda_original": "O rádio: guardião de vozes, histórias e lembranças.",
+      "credito_fonte": "Pinterest (conforme indicado explicitamente no documento-fonte).",
+      "observacao": "ATENÇÃO EDITORIAL: esta é a ÚNICA mídia do documento-fonte explicitamente marcada como vinda de banco de imagens/referência externa. Deve ser tratada exclusivamente como ILUSTRAÇÃO, nunca como fotografia documental real de qualquer entrevistado ou da Vila Conceição I. Exibir rótulo visual 'Imagem ilustrativa' obrigatoriamente na implementação.",
+      "status": "publicado"
+    },
+    {
+      "id": "foto-05",
+      "tipo": "foto",
+      "marcador_editorial": "FOTO 5",
+      "capitulo_relacionado": "Quando ouvir rádio era um encontro coletivo",
+      "caminho_ficticio": "assets/images/foto-5-querubina.webp",
+      "descricao_fonte": "Maria Querubina da Silva Neta sentada na sala de sua casa, na Vila Conceição I.",
+      "legenda_original": "É na sala de casa que Maria Querubina revisita suas memórias e compartilha experiências vividas ao lado do rádio.",
+      "credito_fonte": "Não especificado no documento-fonte.",
+      "observacao": null,
+      "status": "publicado"
+    },
+    {
+      "id": "foto-06",
+      "tipo": "foto",
+      "marcador_editorial": "FOTO 6",
+      "capitulo_relacionado": "Rádio, mais do que um sonho, uma paixão",
+      "caminho_ficticio": "assets/images/foto-6-rita-na-radio-imperatriz.webp",
+      "descricao_fonte": "Rita Maria atuando como locutora em transmissão ao vivo no Parque de Exposições Agropecuária de Imperatriz-MA.",
+      "legenda_original": "Rita Maria, atuando como locutora em uma transmissão ao vivo no parque de Exposições Agropecuária de Imperatriz-MA.",
+      "credito_fonte": "Acervo Pessoal (Rita Maria).",
+      "observacao": null,
+      "status": "publicado"
+    },
+    {
+      "id": "foto-07",
+      "tipo": "foto",
+      "marcador_editorial": "FOTO 7",
+      "capitulo_relacionado": "Rádio, mais do que um sonho, uma paixão",
+      "caminho_ficticio": "assets/images/foto-7-rita-na-mesa.webp",
+      "descricao_fonte": "Rita Maria em sua mesa de trabalho na redação da Rádio Imperatriz.",
+      "legenda_original": "Local onde escrevia e transformava as histórias em reportagens.",
+      "credito_fonte": "Acervo Pessoal (Rita Maria).",
+      "observacao": null,
+      "status": "publicado"
+    },
+    {
+      "id": "foto-08",
+      "tipo": "foto",
+      "marcador_editorial": "FOTO 8",
+      "capitulo_relacionado": "Rádio, mais do que um sonho, uma paixão",
+      "caminho_ficticio": "assets/images/foto-8-jornal-escaneado-programa.webp",
+      "descricao_fonte": "Recorte de jornal escaneado anunciando o novo programa 'De Mulher para Mulher'.",
+      "legenda_original": "Histórias que ficaram guardadas na memória e registradas nas páginas dos jornais.",
+      "credito_fonte": "Acervo Pessoal (Rita Maria).",
+      "observacao": "Tratar como documento digitalizado (recorte de jornal), não como fotografia comum — recomenda-se uso do visualizador ampliável de documentos, e não apenas da galeria de fotos.",
+      "status": "publicado"
+    },
+    {
+      "id": "foto-09",
+      "tipo": "foto",
+      "marcador_editorial": "FOTO 9",
+      "capitulo_relacionado": "Rádio, mais do que um sonho, uma paixão",
+      "caminho_ficticio": "assets/images/foto-9-joana-darc.webp",
+      "descricao_fonte": "Joana Darc da Costa Sousa, ouvinte fiel do programa 'De Mulher pra Mulher'.",
+      "legenda_original": "Joana Darc, uma das ouvintes do programa De Mulher pra Mulher.",
+      "credito_fonte": "Não especificado no documento-fonte.",
+      "observacao": null,
+      "status": "publicado"
+    },
+    {
+      "id": "foto-10",
+      "tipo": "foto",
+      "marcador_editorial": "FOTO 10",
+      "capitulo_relacionado": "Rádio, mais do que um sonho, uma paixão",
+      "caminho_ficticio": "assets/images/foto-10-rita-e-joana-darc.webp",
+      "descricao_fonte": "Rita Maria conversando com Joana Darc no quintal da casa dela, por ocasião do reencontro.",
+      "legenda_original": "Um reencontro carregado de emoção, que aproximou novamente duas histórias ligadas pelo rádio: a da locutora e a da ouvinte.",
+      "credito_fonte": "Não especificado no documento-fonte.",
+      "observacao": null,
+      "status": "publicado"
+    },
+    {
+      "id": "foto-11",
+      "tipo": "foto",
+      "subcategoria": "carta",
+      "marcador_editorial": "CARTA 2 FRENTE",
+      "capitulo_relacionado": "Escreva uma carta, meu amor: quando a distância cabia dentro de um envelope",
+      "caminho_ficticio": "assets/images/foto-12-carta-angela_frente_.webp",
+      "descricao_fonte": "Seleção de cartas antigas, com destaque para a textura do papel envelhecido e envelopes de postagem.",
+      "legenda_original": "Entre palavras escritas faziam a ponte entre o ouvinte e a locutora. Carta de Angêla Oliveira Sousa - Buritirana-Ma",
+      "credito_fonte": "Não especificado no documento-fonte. Nota da autora no PDF original: 'Está no drive, álbum de galeria' (repositório externo não fornecido).",
+      "observacao": "Pode representar múltiplas cartas/envelopes — considerar na implementação a possibilidade de ser um conjunto de imagens (galeria), não uma única foto. Decisão de estruturação (single vs. array) poderá ser revisitada na etapa de construção dos componentes.",
+      "status": "publicado"
+    },
+    {
+      "id": "foto-12",
+      "tipo": "foto",
+      "subcategoria": "carta",
+      "marcador_editorial": "CARTA 2 VERSO",
+      "capitulo_relacionado": "Escreva uma carta, meu amor: quando a distância cabia dentro de um envelope",
+      "caminho_ficticio": "assets/images/foto-12-carta-angela_verso_.webp",
+      "descricao_fonte": "Carta digitalizada de Ângela Oliveira de Sousa, contendo uma homenagem pessoal a Rita Maria.",
+      "legenda_original": "Cartas que marcaram minha trajetória como locutora e preservaram a memória dos laços construídos com os ouvintes da Rádio Imperatriz. Carta de Angêla Oliveira Sousa - Buritirana-Ma",
+      "credito_fonte": "Não especificado no documento-fonte (parte do acervo pessoal de cartas de Rita Maria).",
+      "observacao": "Documento com texto manuscrito relevante para o visualizador ampliável de cartas/documentos, junto com transcrição literal já disponível no mapa editorial.",
+      "status": "publicado"
+    },
+    {
+      "id": "foto-13",
+      "tipo": "foto",
+      "marcador_editorial": "FOTO 13",
+      "caminho_ficticio": "assets/images/outras/1-carteira-de-trabalho-rita.webp",
+      "legenda_original": "Carteira de Trabalho",
+      "status": "publicado"
+    },
+    {
+      "id": "foto-14",
+      "tipo": "foto",
+      "marcador_editorial": "FOTO 14",
+      "caminho_ficticio": "assets/images/outras/2-cartoes-de-impresa-rita.webp",
+      "legenda_original": "Cartões de Imprensa",
+      "status": "publicado"
+    },
+    {
+      "id": "foto-15",
+      "tipo": "foto",
+      "marcador_editorial": "FOTO 15",
+      "caminho_ficticio": "assets/images/outras/3-certificado-reporter-policial.webp",
+      "legenda_original": "Certificado de repórter Policial",
+      "status": "publicado"
+    },
+    {
+      "id": "foto-16",
+      "tipo": "foto",
+      "marcador_editorial": "FOTO 16",
+      "caminho_ficticio": "assets/images/outras/4-radio-imperatriz.webp",
+      "legenda_original": "Rádio Imperatriz",
+      "status": "publicado"
+    },
+    {
+      "id": "foto-17",
+      "tipo": "foto",
+      "marcador_editorial": "FOTO 17",
+      "caminho_ficticio": "assets/images/outras/5-radio-imperatriz.webp",
+      "legenda_original": "Rádio Imperatriz",
+      "status": "publicado"
+    },
+    {
+      "id": "foto-18",
+      "tipo": "foto",
+      "marcador_editorial": "FOTO 18",
+      "caminho_ficticio": "assets/images/outras/6-radio-imperatriz.webp",
+      "legenda_original": "Rádio Imperatriz",
+      "status": "publicado"
+    },
+    {
+      "id": "foto-19",
+      "tipo": "foto",
+      "marcador_editorial": "FOTO 19",
+      "caminho_ficticio": "assets/images/outras/7-radio-imperatriz.webp",
+      "legenda_original": "Rádio Imperatriz",
+      "status": "publicado"
+    },
+    {
+      "id": "foto-20",
+      "tipo": "foto",
+      "marcador_editorial": "FOTO 20",
+      "caminho_ficticio": "assets/images/outras/8-rita-reporter.webp",
+      "legenda_original": "Rita Repórter",
+      "status": "publicado"
+    },
+    {
+      "id": "foto-21",
+      "tipo": "foto",
+      "marcador_editorial": "FOTO 21",
+      "caminho_ficticio": "assets/images/recorte/conto-esporte.webp",
+      "legenda_original": "Conto Esporte",
+      "status": "publicado"
+    },
+    {
+      "id": "foto-22",
+      "tipo": "foto",
+      "marcador_editorial": "FOTO 22",
+      "caminho_ficticio": "assets/images/recorte/conto-rita-escreveu.webp",
+      "legenda_original": "Conto escrito por Rita Maria",
+      "status": "publicado"
+    },
+    {
+      "id": "foto-23",
+      "tipo": "foto",
+      "marcador_editorial": "FOTO 23",
+      "caminho_ficticio": "assets/images/recorte/conversando-rita-pode-entrar-na-radio-itz.webp",
+      "legenda_original": "Conversando - Rita pode entrar na Rádio Imperatriz",
+      "status": "publicado"
+    },
+    {
+      "id": "foto-24",
+      "tipo": "foto",
+      "marcador_editorial": "FOTO 24",
+      "caminho_ficticio": "assets/images/recorte/rita-maria-perola-negra.webp",
+      "legenda_original": "Rita Maria - Pérola Negrra",
+      "status": "publicado"
+    },
+    {
+      "id": "foto-24",
+      "tipo": "foto",
+      "marcador_editorial": "FOTO 24",
+      "caminho_ficticio": "assets/images/recorte/rita-no-jornal.webp",
+      "legenda_original": "joenalista Rita Maria ao lado do Deputado Paulo Marinho",
+      "status": "publicado"
+    },
+    {
+      "id": "carta-1",
+      "tipo": "foto",
+      "subcategoria": "carta",
+      "marcador_editorial": "CARTA 1",
+      "caminho_ficticio": "assets/images/cartas/carta-1-amalia.webp",
+      "legenda_original": "Carta de Anália Ferreira - Paraibano-ma",
+      "status": "publicado"
+    },
+    {
+      "id": "carta-3-1",
+      "tipo": "foto",
+      "subcategoria": "carta",
+      "marcador_editorial": "CARTA 3 - FRENTE",
+      "caminho_ficticio": "assets/images/cartas/carta-3-deusilene-frente.webp",
+      "legenda_original": "Carta de Deusilene - Fazenda Campo Alegre",
+      "status": "publicado"
+    },
+    {
+      "id": "carta-3-1",
+      "tipo": "foto",
+      "subcategoria": "carta",
+      "marcador_editorial": "CARTA 3 - VERSO",
+      "caminho_ficticio": "assets/images/cartas/carta-3-deusilene-verso.webp",
+      "legenda_original": "Carta de Deusilene - Fazenda Campo Alegre",
+      "status": "publicado"
+    },
+    {
+      "id": "carta-4-1",
+      "tipo": "foto",
+      "subcategoria": "carta",
+      "marcador_editorial": "CARTA 4 - ENVELOPE",
+      "caminho_ficticio": "assets/images/cartas/carta-4-francilane-pereira-envelope.webp",
+      "legenda_original": "Carta de Franciele Pereira Santiago - Sitio Novo-Ma",
+      "status": "publicado"
+    },
+    {
+      "id": "carta-4-2",
+      "tipo": "foto",
+      "subcategoria": "carta",
+      "marcador_editorial": "CARTA 4 - FRENTE",
+      "caminho_ficticio": "assets/images/cartas/carta-4-francilane-pereira-frente.webp",
+      "legenda_original": "Carta de Franciele Pereira Santiago - Sitio Novo-Ma",
+      "status": "publicado"
+    },
+    {
+      "id": "carta-4-3",
+      "tipo": "foto",
+      "subcategoria": "carta",
+      "marcador_editorial": "CARTA 4 - VERSO",
+      "caminho_ficticio": "assets/images/cartas/carta-4-francilane-pereira-verso.webp",
+      "legenda_original": "Carta de Franciele Pereira Santiago - Sitio Novo-Ma",
+      "status": "publicado"
+    },
+    {
+      "id": "carta-5-1",
+      "tipo": "foto",
+      "subcategoria": "carta",
+      "marcador_editorial": "CARTA 5 - ENVELOPE - FRENTE",
+      "caminho_ficticio": "assets/images/cartas/carta-5-jose-pereira-de-morais-envelope-frente.webp",
+      "legenda_original": "Carta de José Pereira de Morais - Sitio Novo-Ma",
+      "status": "publicado"
+    },
+    {
+      "id": "carta-5-2",
+      "tipo": "foto",
+      "subcategoria": "carta",
+      "marcador_editorial": "CARTA 5 - ENVELOPE - VERSO",
+      "caminho_ficticio": "assets/images/cartas/carta-5-jose-pereira-de-morais-envelope-verso.webp",
+      "legenda_original": "Carta de José Pereira de Morais - Sitio Novo-Ma",
+      "status": "publicado"
+    },
+    {
+      "id": "carta-5-3",
+      "tipo": "foto",
+      "subcategoria": "carta",
+      "marcador_editorial": "CARTA 5 - FRENTE",
+      "caminho_ficticio": "assets/images/cartas/carta-5-jose-pereira-de-morais-frente.webp",
+      "legenda_original": "Carta de José Pereira de Morais - Sitio Novo-Ma",
+      "status": "publicado"
+    },
+    {
+      "id": "carta-5-4",
+      "tipo": "foto",
+      "subcategoria": "carta",
+      "marcador_editorial": "CARTA 5 - VERSO",
+      "caminho_ficticio": "assets/images/cartas/carta-5-jose-pereira-de-morais-verso.webp",
+      "legenda_original": "Carta de José Pereira de Morais - Sitio Novo-Ma",
+      "status": "publicado"
+    },
+    {
+      "id": "carta-6-1",
+      "tipo": "foto",
+      "subcategoria": "carta",
+      "marcador_editorial": "CARTA 6 - FRENTE",
+      "caminho_ficticio": "assets/images/cartas/carta-6-valquiria-frente.webp",
+      "legenda_original": "Carta de Valquíria - Montes Altos-Ma",
+      "status": "publicado"
+    },
+    {
+      "id": "carta-6-2",
+      "tipo": "foto",
+      "subcategoria": "carta",
+      "marcador_editorial": "CARTA 6 - VERSO",
+      "caminho_ficticio": "assets/images/cartas/carta-6-valquiria-verso.webp",
+      "legenda_original": "Carta de Valquíria - Montes Altos-Ma",
+      "status": "publicado"
+    },
+    {
+      "id": "carta-7-1",
+      "tipo": "foto",
+      "subcategoria": "carta",
+      "marcador_editorial": "CARTA 1 - FRENTE",
+      "caminho_ficticio": "assets/images/cartas/carta-7-maria-antonia-frente.webp",
+      "legenda_original": "Carta de Maria Antônia - Buriti-To",
+      "status": "publicado"
+    },
+    {
+      "id": "carta-7-2",
+      "tipo": "foto",
+      "subcategoria": "carta",
+      "marcador_editorial": "CARTA 1 - VERSO",
+      "caminho_ficticio": "assets/images/cartas/carta-7-maria-antonia-verso.webp",
+      "legenda_original": "Carta de Maria Antônia - Buriti-To",
+      "status": "publicado"
+    },
+    {
+      "id": "carta-8",
+      "tipo": "foto",
+      "subcategoria": "carta",
+      "marcador_editorial": "CARTA 8",
+      "caminho_ficticio": "assets/images/cartas/carta-8-eluizo-pereira.webp",
+      "legenda_original": "Carta de Eluizo Pereira - Lajeado Novo-Ma",
+      "status": "publicado"
+    },
+    {
+      "id": "audio-01",
+      "tipo": "audio",
+      "marcador_editorial": "ÁUDIO 1",
+      "capitulo_relacionado": "Abertura (fundação da Vila Conceição I)",
+      "caminho_ficticio": "assets/audio/audio_1_querubina.mp3",
+      "descricao_fonte": "Maria Querubina relata as notícias transmitidas pela Rádio Imperatriz e o clima de medo e apreensão entre as famílias do assentamento.",
+      "legenda_original": "Em seu relato, Maria Querubina recorda as notícias transmitidas pela Rádio Imperatriz e o clima de medo e apreensão que elas provocavam entre as famílias do assentamento.",
+      "credito_fonte": "Entrevista original (depoimento de Maria Querubina).",
+      "observacao": null,
+      "status": "publicado"
+    },
+    {
+      "id": "audio-02",
+      "tipo": "audio",
+      "marcador_editorial": "ÁUDIO 2",
+      "capitulo_relacionado": "Memórias que o tempo não apaga (subseção)",
+      "caminho_ficticio": "assets/audio/audio_2_conto_de_pajeu_matuto_do_futebol.mp3",
+      "descricao_fonte": "Um dos contos do radialista Pajeú, intitulado 'O matuto no futebol'.",
+      "legenda_original": "O matuto no futebol.",
+      "credito_fonte": "YouTube, canal/autor: Anchieta Gueiros (conforme indicado no documento-fonte).",
+      "observacao": "Conteúdo de terceiros originalmente hospedado no YouTube — ver nota sobre direitos autorais em docs/03-pontos-revisao-editorial.md, item 4.3.",
+      "status": "publicado"
+    },
+    {
+      "id": "audio-03",
+      "tipo": "audio",
+      "marcador_editorial": "ÁUDIO 3",
+      "capitulo_relacionado": "O rádio, companheiro de todas as horas",
+      "caminho_ficticio": "assets/audio/audio_3_manoel.mp3",
+      "descricao_fonte": "Seu Manoel falando sobre sua paixão pelo rádio, reafirmando que o aparelho está sempre em primeiro lugar, mesmo diante de outras tecnologias.",
+      "legenda_original": "O tempo passou, novas tecnologias chegaram, mas o rádio continua ocupando um lugar especial na vida de seu Manoel.",
+      "credito_fonte": "Entrevista original (depoimento de Manoel Ferreira Cesar).",
+      "observacao": "Áudio corresponde à fala citada na Janela: 'O rádio está em primeiro lugar, nunca vou esquecer o rádio...'",
+      "status": "publicado"
+    },
+    {
+      "id": "audio-04",
+      "tipo": "audio",
+      "marcador_editorial": "ÁUDIO 4",
+      "capitulo_relacionado": "Quando ouvir rádio era um encontro coletivo",
+      "caminho_ficticio": "assets/audio/audio_4_obrigada_ao_homem_do_campo.mp3",
+      "descricao_fonte": "Canção 'Obrigada ao Homem do Campo' (Dom e Ravel, 1971), lembrada por Maria Querubina como parte de sua juventude.",
+      "legenda_original": "Querubina revive a alegria de ouvir uma das canções que marcaram sua juventude e sua história com o rádio.",
+      "credito_fonte": "Composição de Dom e Ravel (1971); também gravada por César e Paulinho e por Sérgio Reis, conforme mencionado no texto.",
+      "observacao": null,
+      "status": "publicado"
+    },
+    {
+      "id": "audio-05",
+      "tipo": "audio",
+      "marcador_editorial": "ÁUDIO 5",
+      "capitulo_relacionado": "Entre a companhia do rádio e o medo das notícias",
+      "caminho_ficticio": "assets/audio/audio_5_querubina.mp3",
+      "descricao_fonte": "Maria Querubina fala sobre as ameaças veiculadas pelo rádio durante o período de conflito na fundação da Vila Conceição I.",
+      "legenda_original": "A voz dos locutores ecoava pelo rádio, levando notícias que ficaram gravadas na memória de quem viveu os desafios da luta pela terra.",
+      "credito_fonte": "Entrevista original (depoimento de Maria Querubina).",
+      "observacao": null,
+      "status": "publicado"
+    },
+    {
+      "id": "audio-06",
+      "tipo": "audio",
+      "marcador_editorial": "ÁUDIO 6",
+      "capitulo_relacionado": "Rádio, mais do que um sonho, uma paixão",
+      "caminho_ficticio": "assets/audio/audio_6_primeiro_programa_radio_imperatriz.mp3",
+      "descricao_fonte": "Transmissão do primeiro programa da Rádio Imperatriz, com locução de Moacyr Spósito, diretor da Rádio Imperatriz Sociedade Ltda.",
+      "legenda_original": "transmissão do primeiro programa Rádio Imperatriz, com a locução de Moacyr Spósito - diretor da Rádio Imperatriz Sociedade Ltda.",
+      "credito_fonte": "JOIMP.",
+      "observacao": "Peça historicamente significativa — data de referência da inauguração da emissora: 28 de outubro de 1978.",
+      "status": "publicado"
+    },
+    {
+      "id": "audio-07",
+      "tipo": "audio",
+      "marcador_editorial": "ÁUDIO 7",
+      "capitulo_relacionado": "Escreva uma carta, meu amor: quando a distância cabia dentro de um envelope",
+      "caminho_ficticio": "assets/audio/audio_7_escreva_uma_carta_meu_amor.mp3",
+      "descricao_fonte": "Música 'Escreva uma Carta, Meu Amor', gravada por Roberto Carlos em 1965, usada como referência para o tema das cartas e da memória afetiva.",
+      "legenda_original": "(sem legenda textual própria além da indicação de fonte)",
+      "credito_fonte": "YouTube. Composição de Antônio Ladislau da Silva e Sebastião Ladislau da Silva; gravação de Roberto Carlos (1965).",
+      "observacao": "Conteúdo de terceiros originalmente hospedado no YouTube — mesma ressalva de direitos autorais do áudio-02.",
+      "status": "publicado"
+    },
+    {
+      "id": "audio-08",
+      "tipo": "audio",
+      "marcador_editorial": "ÁUDIO 8a",
+      "capitulo_relacionado": "Escreva uma carta, meu amor: quando a distância cabia dentro de um envelope",
+      "caminho_ficticio": "assets/audio/simulacao_radio_carta_1.mp3",
+      "descricao_fonte": "Simulação de Rita Maria lendo cartas de ouvintes, recriando o momento em que o conteúdo das cartas era lido ao vivo no programa de rádio.",
+      "legenda_original": "Era tempo de esperar a locutora anunciar o nome do destinatário, abrir o envelope e ler a carta. Em cada palavra, uma demonstração de carinho, saudade e amizade.",
+      "credito_fonte": "Recriando o momento da Locutora Rita Maria em seu programa na Radio Imperatriz em seu programa, lendo a carta de Anália em 1991 com pedido de música de Fábio Júnior, Caça e Caçador.",
+      "observacao": "Nota original sugere que pode haver DUAS simulações distintas ('Carta 1 e 2'). Caminho único definido aqui como placeholder consolidado; se os dois arquivos forem fornecidos separadamente no futuro, recomenda-se desdobrar em audio-08a e audio-08b.",
+      "status": "publicado"
+    },
+    {
+      "id": "audio-09",
+      "tipo": "audio",
+      "marcador_editorial": "ÁUDIO 8b",
+      "capitulo_relacionado": "Escreva uma carta, meu amor: quando a distância cabia dentro de um envelope",
+      "caminho_ficticio": "assets/audio/simulacao_radio_carta_2.mp3",
+      "descricao_fonte": "Simulação de Rita Maria lendo cartas de ouvintes, recriando o momento em que o conteúdo das cartas era lido ao vivo no programa de rádio.",
+      "legenda_original": "Era tempo de esperar a locutora anunciar o nome do destinatário, abrir o envelope e ler a carta. Em cada palavra, uma demonstração de carinho, saudade e amizade.",
+      "credito_fonte": "Recriando o momento da Locutora Rita Maria em seu programa na Radio Imperatriz em seu programa, lendo a carta de José Pereira em 1999 com pedido de música de Amado Batista, Moreninha.",
+      "observacao": "Nota original sugere que pode haver DUAS simulações distintas ('Carta 1 e 2'). Caminho único definido aqui como placeholder consolidado; se os dois arquivos forem fornecidos separadamente no futuro, recomenda-se desdobrar em audio-08a e audio-08b.",
+      "status": "publicado"
+    },
+    {
+      "id": "video-01",
+      "tipo": "video",
+      "marcador_editorial": "VÍDEO 1",
+      "capitulo_relacionado": "Abertura (fundação da Vila Conceição I)",
+      "youtube_id": "w2rNcd3RNwA",
+      "descricao_fonte": "Maria Querubina fala sobre o medo provocado pelas notícias veiculadas no rádio e o êxodo de famílias do assentamento.",
+      "legenda_original": "O medo provocado pelas notícias veiculadas no rádio gerou incertezas entre as famílias e levou muitas delas a deixar o assentamento.",
+      "credito_fonte": "Entrevista original (depoimento de Maria Querubina).",
+      "observacao": null,
+      "status": "publicado"
+    },
+    {
+      "id": "video-02",
+      "tipo": "video",
+      "marcador_editorial": "VÍDEO 2",
+      "capitulo_relacionado": "O rádio como testemunha da história de moradores da Vila Conceição I",
+      "youtube_id": "BXTLhI_xo5Y",
+      "descricao_fonte": "Seu Manoel conta histórias de sua juventude relacionadas ao rádio.",
+      "legenda_original": "Detalhes da juventude e histórias vividas por seu Manoel com o rádio, lembranças que o tempo não apagou e que ele nunca esqueceu.",
+      "credito_fonte": "Entrevista original (depoimento de Manoel Ferreira Cesar).",
+      "observacao": null,
+      "status": "publicado"
+    },
+    {
+      "id": "video-03",
+      "tipo": "video",
+      "marcador_editorial": "VÍDEO 3",
+      "capitulo_relacionado": "Memórias que o tempo não apaga (subseção)",
+      "youtube_id": "e6qd_0R8hTU",
+      "descricao_fonte": "Seu Manoel canta a música que o faz lembrar de sua esposa, com quem está casado há 56 anos.",
+      "legenda_original": "A música que faz seu Manoel recordar seu único e verdadeiro amor: sua esposa, com quem compartilha uma vida de amor e companheirismo há cinco décadas.",
+      "credito_fonte": "Entrevista original (depoimento/performance de Manoel Ferreira Cesar).",
+      "observacao": null,
+      "status": "publicado"
+    },
+    {
+      "id": "video-04",
+      "tipo": "video",
+      "marcador_editorial": "VÍDEO 4",
+      "capitulo_relacionado": "Entre a companhia do rádio e o medo das notícias",
+      "youtube_id": "cJvNiVc9icE",
+      "descricao_fonte": "Maria Querubina fala sobre a luta pela terra e a importância da comunicação (rádio) na formação da comunidade.",
+      "legenda_original": "Histórias de quem vivenciou a luta pela terra e reconhece a importância da comunicação na formação da comunidade.",
+      "credito_fonte": "Entrevista original (depoimento de Maria Querubina).",
+      "observacao": null,
+      "status": "publicado"
+    },
+    {
+      "id": "video-05",
+      "tipo": "video",
+      "marcador_editorial": "VÍDEO 5",
+      "capitulo_relacionado": "Rádio, mais do que um sonho, uma paixão",
+      "youtube_id": "ioM0TMJlHsI",
+      "descricao_fonte": "Joana Darc fala, emocionada, sobre o reencontro com Rita Maria e a amizade construída através do rádio.",
+      "legenda_original": "A emoção de Joana ao falar da amizade entre ouvintes e locutores mostra que o rádio vai além da informação: aproxima pessoas, ameniza a solidão e cria vínculos afetivos.",
+      "credito_fonte": "Entrevista original (depoimento de Joana Darc da Costa Sousa).",
+      "observacao": null,
+      "status": "publicado"
+    }
+  ]
+}
